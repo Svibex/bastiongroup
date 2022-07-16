@@ -1,0 +1,156 @@
+@import "../../App"
+
+.headerTop_wrapper
+  background: $grey
+
+.headerTop
+  width: 1110px
+  height: 47px
+  margin: 0 auto
+  @include flex-space-between ()
+
+.headerTop__nav, .headerTop__contacts
+  @include flex-space-between ()
+
+.headerTop__nav
+  width: 460px
+
+.headerTop__contacts
+  width: 440px
+  li
+    display: flex
+
+.headerTop__contacts__phone
+  width: 15px
+  height: 15px
+  background-image: url("../../assets/img/phone.png")
+  margin-right: 10px
+
+.headerTop__contacts__city__group
+  display: flex
+  align-items: center
+
+.headerTop__contacts__map
+  width: 15px
+  height: 15px
+  background-image: url("../../assets/img/map.png")
+  margin-right: 10px
+
+.headerTop__contacts__city
+  color: $red
+
+.headerTop__contacts__arrow
+  background-image: url("../../assets/img/down.png")
+  width: 8px
+  height: 8px
+  margin-left: 2px
+
+.headerTop__contacts__mail
+  width: 15px
+  height: 15px
+  background-image: url("../../assets/img/mail.png")
+  margin-right: 10px
+
+.headerTop__contacts__phoneNumber
+  font-weight: 700
+
+.headerBottom
+  height: 110px
+  width: 1110px
+  margin: 0 auto
+  @include flex-space-between ()
+
+.headerBottom__logo
+  background-image: url("../../assets/img/header__logo.png")
+  height: 70px
+  width: 82px
+
+.headerBottom__text
+  width: 112px
+  font-size: 12px
+  line-height: 12px
+  letter-spacing: 0.009em
+  text-align: left
+  font-weight: 500
+
+.headerBottom__button
+  background-color: $red
+  color: $white
+  height: 42px
+  width: 145px
+  border-radius: 4px
+  display: flex
+  align-items: center
+  justify-content: start
+
+.headerBottom__button__img
+  background-image: url("../../assets/img/stroke.png")
+  height: 18px
+  width: 18px
+  margin: 0 15px 0 20px
+
+.headerBottom__input
+  position: relative
+  input
+    height: 42px
+    width: 546px
+    border-radius: 4px
+    border: 1px solid $middleGrey
+    color: $middleGrey
+    padding-left: 48px
+
+.headerBottom__input__search
+  position: absolute
+  background-image: url("../../assets/img/search.png")
+  height: 16px
+  width: 16px
+  left: 17px
+  top: 13px
+
+.headerBottom__input__corner
+  position: absolute
+  background-image: url("../../assets/img/corner.png")
+  height: 20px
+  width: 20px
+  right: 17px
+  top: 11px
+
+.headerBottom__list
+  width: 145px
+  height: 40px
+  @include flex-space-between ()
+
+.headerBottom__list__item
+  @include flex-space-between ()
+  flex-direction: column
+  position: relative
+  height: 40px
+
+.headerBottom__list__item__counter
+  background: $red
+  color: $white
+  font-weight: 600
+  width: 13px
+  height: 13px
+  font-size: 8px
+  line-height: 10px
+  letter-spacing: 0.009em
+  border-radius: 6px
+  position: absolute
+  right: 14px
+  top: -4px
+  vertical-align: center
+  border: 1px solid $white
+  @include flex-center
+
+.headerBottom__list__item__star
+  background-image: url("../../assets/img/star.png")
+  width: 20px
+  height: 20px
+
+.headerBottom__list__item__shopping
+  background-image: url("../../assets/img/shopping.png")
+  width: 20px
+  height: 20px
+
+
