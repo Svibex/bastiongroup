@@ -2,7 +2,7 @@
 
 .footer
   position: relative
-  background: $black
+  background: $footer
   height: 291px
   margin: 0 auto
 
@@ -53,3 +53,90 @@ form
 .footerForm__text
   width: 250px
   color: $darkGrey
+
+.footerInfo
+  width: 1110px
+  margin: 0 auto
+  padding-top: 107px
+  color: rgba(255,255,255,0.8)
+  height: 292px
+
+.footerInfo__list
+  @include flex-space-between
+  height: 100px
+
+#footerInfo__logo
+  background-image: url("../../assets/img/logo_footer.png")
+  height: 70px
+  width: 82px
+
+#footerInfo__text1
+  width: 180px
+
+#footerInfo__text2
+  width: 255px
+
+#footerInfo__text1, #footerInfo__text2, #footerInfo__contacts
+  height: 40px
+  line-height: 2
+  letter-spacing: 1px
+
+.footerInfo__phone
+  font-weight: 700
+  font-size: 16px
+  color: $white
+
+.footerInfo__mail
+  border-bottom: 1px dashed rgba(255,255,255,0.6)
+  padding: 0
+  width: 128px
+  height: 25px
+
+.footerInfo__hr
+  height: 1px
+  background: rgba(198,198,198,0.2)
+  width: 1110px
+  margin: 15px 0 20px 0
+
+.footerInfo__connection
+  @include flex-space-between
+  line-height: 2
+  letter-spacing: 1px
+
+.footerInfo__connection__socialMedias
+  @include flex-space-between
+  width: 208px
+
+.socialMedias__item
+  width: 26px
+  height: 26px
+  border: 1px solid $white
+  border-radius: 13px
+  @include flex-center
+
+#whatsApp
+  background: url("../../assets/img/social/whatsapp.png")
+  width: 12px
+  height: 11px
+
+#tlg
+  background: url("../../assets/img/social/tlg.png")
+  width: 12px
+  height: 10px
+
+#vk
+  background: url("../../assets/img/social/vk.png")
+  width: 14px
+  height: 9px
+
+#inst
+  background: url("../../assets/img/social/instagram.png")
+  background-size: 12px
+  width: 12px
+  height: 12px
+
+#fb
+  background: url("../../assets/img/social/fb.png")
+  background-size: 16px
+  width: 16px
+  height: 16px
