@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
     return (
-        <>
+        <header>
             <div className="headerTop_wrapper">
                 <div className="headerTop">
                     <ul className="headerTop__nav">
@@ -57,7 +57,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-        </>
+        </header>
     );
 };
 

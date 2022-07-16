@@ -1,4 +1,4 @@
-@import "../../App"
+@import "../../styles/basic"
 
 .headerTop_wrapper
   background: $grey
@@ -81,7 +81,7 @@
   border-radius: 4px
   display: flex
   align-items: center
-  justify-content: start
+  justify-content: flex-start
 
 .headerBottom__button__img
   background-image: url("../../assets/img/stroke.png")
@@ -96,8 +96,10 @@
     width: 546px
     border-radius: 4px
     border: 1px solid $middleGrey
-    color: $middleGrey
+    color: $black
     padding-left: 48px
+  input::placeholder
+    color: $darkGrey
 
 .headerBottom__input__search
   position: absolute

@@ -1,0 +1,55 @@
+@import "../../styles/basic"
+
+.footer
+  position: relative
+  background: $black
+  height: 291px
+  margin: 0 auto
+
+.footerForm
+  position: absolute
+  width: 1110px
+  height: 136px
+  background: $white
+  border-radius: 7px
+  top: -68px
+  left: 50%
+  transform: translate(-50%, 0%)
+  display: flex
+  align-items: flex-start
+
+form
+  @include flex-space-between
+  width: 1030px
+  height: 90px
+  margin: 26px auto 0 auto
+
+.footerForm__name, .footerForm__phone
+  width: 356px
+  height: 45px
+  color: $black
+  border-bottom: 2px solid $middleGrey
+  font-size: 20px
+  margin-top: -30px
+
+.footerForm__name::placeholder, .footerForm__phone::placeholder
+  color: $darkGrey
+
+.footerForm__button_group
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 90px
+
+.footerForm__button
+  background: $lightRed
+  color: $white
+  width: 260px
+  height: 47px
+  border-radius: 5px
+  letter-spacing: 2px
+  font-size: 18px
+
+.footerForm__text
+  width: 250px
+  color: $darkGrey
