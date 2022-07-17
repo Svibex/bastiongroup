@@ -5,8 +5,30 @@ const MainPage = () => {
     return (
         <div className="mainPage__wrapper">
             <div className="mainPage">
-                <div className="mainPage__header">
-
+                <div className="mainPage__title">
+                    <div className="mainPage__title__description">
+                        <p>Главная</p>
+                        <p>&#8250;</p>
+                        <p>Интернет магазин</p>
+                        <p>&#8250;</p>
+                        <p>Опоры трубопроводов</p>
+                    </div>
+                    <div className="mainPage__nav">
+                        <div className="mainPage__return">
+                            <div className="mainPage__activeCircle">&#8592;</div>
+                            <h3>Опоры трубопроводов</h3>
+                        </div>
+                        <div className="mainPage__sort">
+                            <div className="mainPage__sort__popular">
+                                <p>Сначала популярные</p>
+                                <div className="mainPage__sort-img" />
+                            </div>
+                            <div className="mainPage__sort__icons">
+                                <div className="mainPage__block-img" />
+                                <div className="mainPage__list-img" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="mainPage__products">
 
@@ -14,7 +36,7 @@ const MainPage = () => {
                 <div className="mainPage__pagination">
                     <div className="mainPage__pagination__itemsQuantity">
                         <p>Выводить по</p>
-                        <div className="mainPage__pagination__itemsQuantity__active">9</div>
+                        <div className="mainPage__activeCircle">9</div>
                         <div>15</div>
                         <div>21</div>
                     </div>
@@ -30,9 +52,9 @@ const MainPage = () => {
                     <p className="mainPage__pagination__show">Показать все товары</p>
                 </div>
                 <div className="mainPage__description">
-                    <h3 className="mainPage__description__title">
+                    <h4 className="mainPage__description__title">
                         Опоры трубопроводов от Бастион Груп - производитель металлических изделий №1
-                    </h3>
+                    </h4>
                     <p>Надежность работы трубопровода в значительной мере зависит от правильности и прочности его
                         крепления.
                         Основные средства крепления трубопроводов — это опора, подвеска, кронштейны, скобы и другие

@@ -21,6 +21,105 @@ button:hover {
   margin: 0 auto;
 }
 
+.mainPage__title {
+  padding-top: 20px;
+  height: 77px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainPage__title__description {
+  color: #b3b3b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 340px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  letter-spacing: 0.009em;
+  text-align: left;
+}
+.mainPage__title__description p:last-child {
+  color: #000000;
+  font-weight: 500;
+}
+
+.mainPage__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainPage__return {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 390px;
+  margin-top: 13px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.mainPage__sort {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.009em;
+  text-align: left;
+}
+
+.mainPage__sort__popular {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 145px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.mainPage__sort-img {
+  background-image: url("../../assets/img/sort.png");
+  width: 16px;
+  height: 16px;
+}
+
+.mainPage__sort__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 47px;
+  position: relative;
+}
+
+.mainPage__block-img {
+  background: url("../../assets/img/stroke.png") no-repeat #c83e33 50%;
+  background-size: 12px;
+  height: 22px;
+  width: 22px;
+  border-radius: 11px;
+  position: absolute;
+  z-index: 5;
+}
+
+.mainPage__list-img {
+  background: url("../../assets/img/list.png") no-repeat #ffffff 80%;
+  background-size: 12px;
+  width: 43px;
+  height: 18px;
+  border-radius: 9px;
+}
+
 .mainPage__pagination {
   display: flex;
   align-items: center;
@@ -38,7 +137,7 @@ button:hover {
   text-align: left;
 }
 
-.mainPage__pagination__itemsQuantity__active {
+.mainPage__activeCircle {
   color: #c83e33;
   background: #ffffff;
   border-radius: 14px;
