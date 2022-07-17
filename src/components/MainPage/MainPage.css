@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+button:hover {
+  background: #fe7273;
+}
+
+.mainPage__wrapper {
+  background: #f2f2f2;
+  padding-bottom: 108px;
+}
+
+.mainPage {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.mainPage__description {
+  padding-top: 30px;
+  height: 312px;
+}
+.mainPage__description p {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.009em;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.mainPage__description__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.009em;
+  text-align: left;
+}
+
+.mainPage__description__hide {
+  color: #c83e33;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+.mainPage__description__hide p {
+  margin: 0;
+}
+
+.mainPage__description__hide__img {
+  background-image: url("../../assets/img/down.png");
+  width: 8px;
+  height: 8px;
+  transform: rotate(180deg);
+  margin-left: 3px;
+}
+
+/*# sourceMappingURL=MainPage.css.map */
