@@ -8,6 +8,61 @@
   width: 1110px
   margin: 0 auto
 
+
+
+.mainPage__pagination
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.mainPage__pagination__itemsQuantity
+  width: 210px
+  @include flex-space-between
+  font-size: 17px
+  line-height: 20px
+  letter-spacing: 0.009em
+  text-align: left
+
+.mainPage__pagination__itemsQuantity__active
+  color: $red
+  background: $white
+  border-radius: 14px
+  width: 28px
+  height: 28px
+  @include flex-center
+
+.mainPage__pagination__pages
+  color: $greyForPages
+  background: $white
+  width: 252px
+  height: 35px
+  @include flex-center
+  margin-left: 140px
+  div
+    width: 100%
+    height: 35px
+    @include flex-center
+    border: 1px solid $middleGrey
+
+.mainPage__pagination__pages__active
+  color: $black
+
+.mainPage__pagination__show
+  font-size: 15px
+  line-height: 18px
+  letter-spacing: 0.009em
+  text-align: right
+  color: $red
+  margin-left: 42px
+
+
+
+
+
+
+
+
+
 .mainPage__description
   padding-top: 30px
   height: 312px

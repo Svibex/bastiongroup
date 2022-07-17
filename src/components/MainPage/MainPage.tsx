@@ -12,7 +12,22 @@ const MainPage = () => {
 
                 </div>
                 <div className="mainPage__pagination">
-
+                    <div className="mainPage__pagination__itemsQuantity">
+                        <p>Выводить по</p>
+                        <div className="mainPage__pagination__itemsQuantity__active">9</div>
+                        <div>15</div>
+                        <div>21</div>
+                    </div>
+                    <div className="mainPage__pagination__pages">
+                        <div>&#8592;</div>
+                        <div className="mainPage__pagination__pages__active">1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>&#8594;</div>
+                    </div>
+                    <p className="mainPage__pagination__show">Показать все товары</p>
                 </div>
                 <div className="mainPage__description">
                     <h3 className="mainPage__description__title">
