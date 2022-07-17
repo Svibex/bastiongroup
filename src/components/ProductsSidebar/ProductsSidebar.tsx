@@ -79,15 +79,52 @@ const ProductsSidebar = () => {
                         <div className="productsSidebar__types__arrow"/>
                     </div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-
+                <div className="productsSidebar__title">
+                    <div className="productsSidebar__filter productsSidebar__title__group">
+                        <div className="productsSidebar__filter-img"/>
+                        <p>Фильтры</p>
+                    </div>
+                </div>
+                <div className="filter__price__wrapper">
+                    <div className="filter__price">
+                        <p className="filter__title">Цена, руб</p>
+                        <div className="filter__price__img"/>
+                    </div>
+                    <div className="filter__price__inputs">
+                        <input placeholder="104"/>
+                        <p id="placeholder__inputOT">от</p>
+                        <input placeholder="9990"/>
+                        <p id="placeholder__inputDO">до</p>
+                    </div>
+                    <div>---------------------</div>
+                </div>
+                <div className="filter__types">
+                    <div className="filter__title">
+                        <p>Тип продукта</p>
+                        <div/>
+                    </div>
+                    <div className="filter__arrowDown"/>
+                </div>
+                <div className="filter__types">
+                    <div className="filter__title">
+                        <p>Бренд</p>
+                        <div/>
+                    </div>
+                    <div className="filter__arrowDown"/>
+                </div>
+                <div className="checkbox__group checkbox__group-border">
+                    <div className="checkbox"/>
+                    <p className="checkbox__text">Выбор покупателей</p>
+                </div>
+                <div className="checkbox__group">
+                    <div className="checkbox"/>
+                    <div className="checkboxActive"/>
+                    <p className="checkbox__text checkbox__textActive">Лучшая цена</p>
+                </div>
+                <div className="filter__button__wrapper">
+                    <button className="filter__button">Сбросить фильтры</button>
+                </div>
             </div>
-
         </div>
     );
 };

@@ -85,3 +85,130 @@
   width: 8px
   height: 8px
 
+.productsSidebar__filter
+  width: 105px
+
+.productsSidebar__filter-img
+  background-image: url("../../assets/img/setting.png")
+  height: 17px
+  width: 17px
+
+.filter__title
+  font-size: 16px
+  font-weight: 500
+  line-height: 19px
+  letter-spacing: 0.009em
+  text-align: left
+  color: $black
+  display: flex
+
+  div
+    background-image: url("../../assets/img/help.png")
+    background-size: 19px
+    width: 19px
+    height: 19px
+    margin-top: 4px
+    margin-left: 3px
+
+.filter__price__wrapper
+  border-bottom: 1px solid $middleGrey
+  height: 159px
+  width: 270px
+  padding: 21px
+
+.filter__price
+  @include flex-space-between
+
+.filter__price__img
+  background-image: url("../../assets/img/up.png")
+  height: 14px
+  width: 14px
+
+.filter__price__inputs
+  @include flex-space-between
+  position: relative
+  margin-top: 20px
+
+  input
+    border: 1px solid $middleGrey
+    border-radius: 3px
+    width: 107px
+    height: 34px
+    padding-left: 35px
+
+#placeholder__inputOT
+  position: absolute
+  top: 10px
+  left: 15px
+
+#placeholder__inputDO
+  position: absolute
+  top: 10px
+  left: 135px
+
+.filter__types
+  @include flex-space-between
+  height: 60px
+  border-bottom: 1px solid $middleGrey
+  padding: 0 21px 0 25px
+
+.checkbox__group
+  display: flex
+  align-items: center
+  padding: 0 21px 0 25px
+  height: 60px
+  position: relative
+
+.checkbox__group-border
+  border-bottom: 1px solid $middleGrey
+
+.checkbox
+  width: 18px
+  height: 18px
+  border-radius: 2px
+  border: 1px solid $middleGrey
+  margin-right: 10px
+
+.checkboxActive
+  position: absolute
+  background: $red
+  width: 10px
+  height: 10px
+  left: 29px
+  border-radius: 1px
+
+.checkbox__text
+  font-size: 15px
+  line-height: 18px
+  letter-spacing: 0.009em
+  text-align: left
+  color: $greyForPages
+
+.checkbox__textActive
+  color: $black
+
+.filter__button__wrapper
+  @include flex-center
+
+.filter__button
+  color: $greyForPages
+  border: 1px solid $middleGrey
+  border-radius: 4px
+  background: $white
+  font-size: 15px
+  line-height: 18px
+  letter-spacing: 0.009em
+  text-align: center
+  width: 229px
+  height: 47px
+
+.filter__button:hover
+  background: $grey
+
+.filter__arrowDown
+  transform: rotate(180deg)
+  background-image: url("../../assets/img/up.png")
+  width: 14px
+  height: 14px
+
+
