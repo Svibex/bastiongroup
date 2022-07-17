@@ -1,0 +1,87 @@
+@import "../../styles/basic"
+
+.productsSidebar__wrapper
+  border-right: 1px solid $middleGrey
+  width: 270px
+  height: 1338px
+
+.productsSidebar
+  height: 959px
+  width: 270px
+
+.productsSidebar__title
+  width: 270px
+  height: 60px
+  padding: 0 21px
+  @include flex-space-between
+  border-bottom: 1px solid $middleGrey
+
+.productsSidebar__title__group
+  @include flex-space-between
+  width: 115px
+  font-size: 18px
+  font-weight: 500
+  line-height: 22px
+  letter-spacing: 0.009em
+  text-align: left
+
+.productsSidebar__title-img
+  background-image: url("../../assets/img/stroke_red.png")
+  height: 15px
+  width: 15px
+
+.productsSidebar__title__arrowUp
+  background-image: url("../../assets/img/up.png")
+  width: 14px
+  height: 14px
+
+.productsSidebar__types
+  display: flex
+  flex-direction: column
+  width: 270px
+  height: 406px
+  border-bottom: 1px solid $middleGrey
+  padding-left: 21px
+  padding-top: 8px
+  font-size: 12px
+  line-height: 14px
+  letter-spacing: 0.009em
+  text-align: left
+  color: $black
+
+.productsSidebar__types__group
+  width: 215px
+  margin-top: 12px
+  line-height: 1.2
+
+.productsSidebar__types__series
+  color: $darkGrey
+
+.productsSidebar__types__series__description
+  display: flex
+  align-items: flex-end
+
+.productsSidebar__types__series__number
+  background: $red
+  color: $white
+  height: 13px
+  border-radius: 10px
+  padding: 2px 5px
+  font-size: 8px
+  line-height: 10px
+  letter-spacing: 0.009em
+  text-align: center
+  margin-left: 3px
+
+.productsSidebar__types__showAll
+  color: $red
+  display: flex
+  align-items: center
+  padding-bottom: 30px
+  margin-top: 20px
+
+.productsSidebar__types__arrow
+  background-image: url("../../assets/img/down.png")
+  width: 8px
+  height: 8px
+

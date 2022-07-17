@@ -24,7 +24,7 @@ button:hover {
 .mainPage__title {
   padding-top: 20px;
   height: 77px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 35px auto;
   display: flex;
   flex-direction: column;
 }
@@ -124,6 +124,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-top: 27px;
 }
 
 .mainPage__pagination__itemsQuantity {

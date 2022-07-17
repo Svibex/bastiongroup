@@ -1,5 +1,6 @@
 import React from "react";
 import "./MainPage.css";
+import Products from "../Products/Products";
 
 const MainPage = () => {
     return (
@@ -21,18 +22,16 @@ const MainPage = () => {
                         <div className="mainPage__sort">
                             <div className="mainPage__sort__popular">
                                 <p>Сначала популярные</p>
-                                <div className="mainPage__sort-img" />
+                                <div className="mainPage__sort-img"/>
                             </div>
                             <div className="mainPage__sort__icons">
-                                <div className="mainPage__block-img" />
-                                <div className="mainPage__list-img" />
+                                <div className="mainPage__block-img"/>
+                                <div className="mainPage__list-img"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="mainPage__products">
-
-                </div>
+                <Products/>
                 <div className="mainPage__pagination">
                     <div className="mainPage__pagination__itemsQuantity">
                         <p>Выводить по</p>
@@ -82,7 +81,7 @@ const MainPage = () => {
                     </p>
                     <div className="mainPage__description__hide">
                         <p>Скрыть описание</p>
-                        <div className="mainPage__description__hide__img" />
+                        <div className="mainPage__description__hide__img"/>
                     </div>
                 </div>
             </div>
