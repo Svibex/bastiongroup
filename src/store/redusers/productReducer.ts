@@ -2,7 +2,7 @@ import {ProductState, ActionTypes, UserAction} from '../../types/types';
 import db from '../../assets/db';
 
 const initialState: ProductState = {
-    productTypes: [],
+    productTypes: [{id: 1, name: 'Опора'}],
     products: db,
 }
 

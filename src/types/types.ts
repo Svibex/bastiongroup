@@ -1,5 +1,5 @@
 export interface ProductState {
-    productTypes: string[],
+    productTypes: ProductType[],
     products: Product[]
 }
 
@@ -12,6 +12,11 @@ export interface Product {
     img?: string
 }
 
+export interface ProductType {
+    id: number | string,
+    name: string
+}
+
 export enum ActionTypes {
     ADD_PRODUCT_TYPE = "ADD_PRODUCT_TYPE",
     ADD_PRODUCT = "ADD_PRODUCT"
@@ -19,7 +24,7 @@ export enum ActionTypes {
 
 export interface AddProductTypeAction {
     type: ActionTypes.ADD_PRODUCT_TYPE,
-    payload: string
+    payload: ProductType
 }
 
 export interface AddProductAction {

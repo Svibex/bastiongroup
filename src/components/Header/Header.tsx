@@ -8,8 +8,12 @@ const Header = () => {
             <div className="headerTop_wrapper">
                 <div className="headerTop">
                     <ul className="headerTop__nav">
-                        <li>Типы продуктов</li>
-                        <li>Продукты</li>
+                        <Link to="/types">
+                            <li>Типы продуктов</li>
+                        </Link>
+                        <Link to="/products">
+                            <li>Продукты</li>
+                        </Link>
                         <li>Выгоды для вас</li>
                         <li>Гарантии</li>
                         <li>Контакты</li>
@@ -33,8 +37,10 @@ const Header = () => {
             </div>
             <div className="headerBottom_wrapper">
                 <div className="headerBottom">
-                    <div className="headerBottom__logo"/>
-                    <div className="headerBottom__text">Производитель металлических изделий №1</div>
+                    <Link to="/">
+                        <div className="headerBottom__logo"/>
+                        <div className="headerBottom__text">Производитель металлических изделий №1</div>
+                    </Link>
                     <button className="headerBottom__button">
                         <div className="headerBottom__button__img"/>
                         <p>Каталог</p>
