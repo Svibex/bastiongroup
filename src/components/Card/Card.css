@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+button:hover {
+  background: #fe7273;
+}
+
+.card__wrapper {
+  height: 411px;
+  width: 280px;
+  border: 1px solid #e6e6e6;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 380px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.cardImg {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+.cardImg img {
+  margin-top: 15px;
+}
+
+.cardSales {
+  display: flex;
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 270px;
+}
+
+.cardSales__type {
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.009em;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 50px;
+  height: 21px;
+}
+
+.hit {
+  background: #fe7273;
+  width: 54px;
+}
+
+.sale {
+  background: #e57e22;
+  width: 62px;
+  margin-left: 5px;
+}
+
+.promo {
+  background: #25ae60;
+  width: 57px;
+  margin-left: 5px;
+}
+
+.cardGost {
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.009em;
+  text-align: center;
+  color: #C93E33;
+  background: #faeceb;
+  border-radius: 2px;
+  width: 83px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.cardName {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.009em;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 239px;
+}
+
+.cardPrice {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.009em;
+  text-align: left;
+}
+
+/*# sourceMappingURL=Card.css.map */

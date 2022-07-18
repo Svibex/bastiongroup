@@ -1,7 +1,38 @@
 @import "../../styles/basic"
 
 .products_wrapper
-  height: 1338px
-  width: 1110px
+  width: 1112px
   background: $white
   border: 1px solid $middleGrey
+  display: flex
+
+.products__header
+  height: 59px
+
+.products__header
+  @include flex-space-between
+  width: 465px
+  margin-left: 15px
+
+.productsGost
+  color: $black
+  background: $grey
+  font-size: 12px
+  line-height: 14px
+  letter-spacing: 0.009em
+  text-align: center
+  margin-left: 5px
+  border-radius: 4px
+  padding: 6px 10px
+
+.productsGost:hover
+  cursor: pointer
+  background: $pink
+  color: $white
+
+.gostActive
+  color: $white
+  background: $gost
+  margin-left: 0
+
+

@@ -3,6 +3,7 @@ import "./MainPage.css";
 import Products from "../Products/Products";
 
 const MainPage = () => {
+
     return (
         <div className="mainPage__wrapper">
             <div className="mainPage">
