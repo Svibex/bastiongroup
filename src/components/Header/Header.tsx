@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -32,28 +33,30 @@ const Header = () => {
             </div>
             <div className="headerBottom_wrapper">
                 <div className="headerBottom">
-                    <div className="headerBottom__logo" />
+                    <div className="headerBottom__logo"/>
                     <div className="headerBottom__text">Производитель металлических изделий №1</div>
                     <button className="headerBottom__button">
-                        <div className="headerBottom__button__img" />
+                        <div className="headerBottom__button__img"/>
                         <p>Каталог</p>
                     </button>
                     <div className="headerBottom__input">
-                        <label />
-                        <div className="headerBottom__input__search" />
+                        <label/>
+                        <div className="headerBottom__input__search"/>
                         <input placeholder="Поиск по названию..."/>
-                        <div className="headerBottom__input__corner" />
+                        <div className="headerBottom__input__corner"/>
                     </div>
                     <ul className="headerBottom__list">
                         <li className="headerBottom__list__item">
-                            <div className="headerBottom__list__item__star" />
+                            <div className="headerBottom__list__item__star"/>
                             <p>Избранное</p>
                         </li>
-                        <li className="headerBottom__list__item">
-                            <div className="headerBottom__list__item__counter">2</div>
-                            <div className="headerBottom__list__item__shopping" />
-                            <p>Корзина</p>
-                        </li>
+                        <Link to="/basket">
+                            <li className="headerBottom__list__item">
+                                <div className="headerBottom__list__item__counter">2</div>
+                                <div className="headerBottom__list__item__shopping"/>
+                                <p>Корзина</p>
+                            </li>
+                        </Link>
                     </ul>
                 </div>
             </div>
