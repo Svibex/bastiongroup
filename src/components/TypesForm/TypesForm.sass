@@ -1,6 +1,64 @@
 @import "../../styles/basic"
 
-.wrapper
-  @include flex-center
+.typesForm__wrapper
+  min-height: 700px
+  background: $grey
+  display: flex
+  justify-content: center
+
+.typesForm
+  display: flex
   flex-direction: column
-  height: 400px
+  align-items: flex-start
+  width: 1110px
+
+.typesForm__title
+  margin-top: 60px
+
+.typesForm__form
+  margin-top: 45px
+  width: 1110px
+  @include flex-space-between
+
+.typesForm__input
+  border: 1px solid #e6e6e6
+  border-radius: 3px
+  width: 450px
+  height: 34px
+  padding-left: 15px
+
+.typesForm__button
+  background-color: $red
+  color: $white
+  height: 42px
+  width: 145px
+  border-radius: 4px
+
+.typesForm__disabled
+  border: 1px solid $darkGrey
+  height: 42px
+  width: 145px
+  border-radius: 4px
+
+.typesForm__disabled:hover
+  background: none
+  cursor: default
+
+.typesForm__disabled:active
+  transform: none
+
+.typesForm__list
+  margin: 45px auto
+  font-size: 20px
+  line-height: 1.5
+  width: 750px
+
+.table__item
+  text-align: center
+  background: $white
+
+.table__itemPosition
+  width: 70px
+
+.table__itemID
+  width: 300px

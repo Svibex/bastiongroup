@@ -11,12 +11,87 @@ button:hover {
   background: #fe7273;
 }
 
-.wrapper {
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.typesForm__wrapper {
+  min-height: 700px;
+  background: #f2f2f2;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.typesForm {
+  display: flex;
   flex-direction: column;
-  height: 400px;
+  align-items: flex-start;
+  width: 1110px;
+}
+
+.typesForm__title {
+  margin-top: 60px;
+}
+
+.typesForm__form {
+  margin-top: 45px;
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.typesForm__input {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  width: 450px;
+  height: 34px;
+  padding-left: 15px;
+}
+
+.typesForm__button {
+  background-color: #c83e33;
+  color: #ffffff;
+  height: 42px;
+  width: 145px;
+  border-radius: 4px;
+}
+
+.typesForm__disabled {
+  border: 1px solid #c6c6c6;
+  height: 42px;
+  width: 145px;
+  border-radius: 4px;
+}
+
+.typesForm__disabled:hover {
+  background: none;
+  cursor: default;
+}
+
+.typesForm__disabled:active {
+  transform: none;
+}
+
+.typesForm__list {
+  margin: 45px auto;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 750px;
+}
+
+.table__item {
+  text-align: center;
+  background: #ffffff;
+}
+
+.table__itemPosition {
+  width: 70px;
+}
+
+.table__itemID {
+  width: 300px;
 }
 
 /*# sourceMappingURL=TypesForm.css.map */

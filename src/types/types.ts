@@ -14,7 +14,7 @@ export interface Product {
 
 export interface ProductType {
     id: number | string,
-    name: string
+    type: string
 }
 
 export enum ActionTypes {

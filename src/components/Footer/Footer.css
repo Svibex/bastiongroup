@@ -11,6 +11,11 @@ button:hover {
   background: #fe7273;
 }
 
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
 .footer {
   position: relative;
   background: #222628;
@@ -31,7 +36,7 @@ button:hover {
   align-items: flex-start;
 }
 
-form {
+.footerForm__form {
   display: flex;
   justify-content: space-between;
   align-items: center;

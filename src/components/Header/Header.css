@@ -11,6 +11,11 @@ button:hover {
   background: #fe7273;
 }
 
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
 .headerTop_wrapper {
   background: #f2f2f2;
 }
@@ -32,6 +37,9 @@ button:hover {
 
 .headerTop__nav {
   width: 460px;
+}
+.headerTop__nav li {
+  color: #000000;
 }
 
 .headerTop__contacts {
@@ -92,6 +100,13 @@ button:hover {
   align-items: center;
 }
 
+.headerBottom__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 188px;
+}
+
 .headerBottom__logo {
   background-image: url("../../assets/img/header_logo.png");
   height: 70px;
@@ -99,12 +114,13 @@ button:hover {
 }
 
 .headerBottom__text {
-  width: 112px;
+  width: 85px;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 0.009em;
   text-align: left;
   font-weight: 500;
+  color: #000000;
 }
 
 .headerBottom__button {
@@ -173,6 +189,9 @@ button:hover {
   flex-direction: column;
   position: relative;
   height: 40px;
+}
+.headerBottom__list__item p {
+  color: #000000;
 }
 
 .headerBottom__list__item__counter {

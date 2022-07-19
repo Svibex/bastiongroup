@@ -14,6 +14,8 @@
 
 .headerTop__nav
   width: 460px
+  li
+    color: $black
 
 .headerTop__contacts
   width: 440px
@@ -61,18 +63,23 @@
   margin: 0 auto
   @include flex-space-between ()
 
+.headerBottom__group
+  @include flex-space-between
+  width: 188px
+
 .headerBottom__logo
   background-image: url("../../assets/img/header_logo.png")
   height: 70px
   width: 82px
 
 .headerBottom__text
-  width: 112px
+  width: 85px
   font-size: 12px
   line-height: 12px
   letter-spacing: 0.009em
   text-align: left
   font-weight: 500
+  color: $black
 
 .headerBottom__button
   background-color: $red
@@ -128,6 +135,8 @@
   flex-direction: column
   position: relative
   height: 40px
+  p
+    color: $black
 
 .headerBottom__list__item__counter
   background: $red

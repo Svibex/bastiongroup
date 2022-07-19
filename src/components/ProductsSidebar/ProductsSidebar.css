@@ -11,6 +11,11 @@ button:hover {
   background: #fe7273;
 }
 
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
 .productsSidebar__wrapper {
   border-right: 1px solid #e6e6e6;
   width: 270px;

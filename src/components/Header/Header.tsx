@@ -37,7 +37,7 @@ const Header = () => {
             </div>
             <div className="headerBottom_wrapper">
                 <div className="headerBottom">
-                    <Link to="/">
+                    <Link className="headerBottom__group" to="/">
                         <div className="headerBottom__logo"/>
                         <div className="headerBottom__text">Производитель металлических изделий №1</div>
                     </Link>

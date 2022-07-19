@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+button:hover {
+  background: #fe7273;
+}
+
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+
+/*# sourceMappingURL=ProductsForm.css.map */

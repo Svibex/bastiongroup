@@ -5,7 +5,7 @@ import "./TypesForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 function TypesForm() {
-    const [data, setData] = useState({id: '', name: ''});
+    const [data, setData] = useState({id: '', type: ''});
     const [isDisabled, setIsDisabled] = useState(true);
     const productTypes = useTypedSelector(state => state.product.productTypes);
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function TypesForm() {
         event.preventDefault();
         setIsDisabled(true);
         dispatch({type: ActionTypes.ADD_PRODUCT_TYPE, payload: data});
-        setData(() => ({id: '', name: ''}));
+        setData(() => ({id: '', type: ''}));
     }
 
     function onChangeHandler(e: React.ChangeEvent<HTMLInputElement>) {
@@ -26,34 +26,53 @@ function TypesForm() {
     }
 
     useEffect(() => {
-        if (data.id !== '' && data.name !== '') setIsDisabled(false);
+        if (data.id !== '' && data.type !== '') setIsDisabled(false);
         else setIsDisabled(true);
     }, [data])
 
     return (
-        <main className="wrapper">
-            <h2>Добавление типа товара:</h2>
-            <form>
-                <input placeholder="Идентификатор типа"
-                       value={data.id}
-                       name="id"
-                       onChange={onChangeHandler}
-                />
-                <input placeholder="Название типа"
-                       value={data.name}
-                       name="name"
-                       onChange={onChangeHandler}
-                />
-                <button className={isDisabled ? "disabled" : "buttonSubmit"}
-                        type="submit"
-                        onClick={submitHandler}
-                        disabled={isDisabled}
-                >Добавить
-                </button>
-            </form>
-            <ul>
-                {productTypes.map(el => <li>{el.id} {el.name}</li>)}
-            </ul>
+        <main className="typesForm__wrapper">
+            <div className="typesForm">
+                <h3 className="typesForm__title">Добавление типа товара:</h3>
+                <form className="typesForm__form">
+                    <input className="typesForm__input"
+                           placeholder="Идентификатор типа"
+                           value={data.id}
+                           name="id"
+                           onChange={onChangeHandler}
+                    />
+                    <input className="typesForm__input"
+                           placeholder="Название типа"
+                           value={data.type}
+                           name="type"
+                           onChange={onChangeHandler}
+                    />
+                    <button className={isDisabled ? "typesForm__disabled" : "typesForm__button"}
+                            type="submit"
+                            onClick={submitHandler}
+                            disabled={isDisabled}
+                    >Добавить
+                    </button>
+                </form>
+                <table className="typesForm__list">
+                    <thead>
+                    <tr>
+                        <th className="table__item table__itemPosition">№</th>
+                        <th className="table__item table__itemID">ID</th>
+                        <th className="table__item">Название</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {productTypes.map((el, i) => {
+                        return <tr key={i}>
+                            <td className="table__item">{i+1}</td>
+                            <td className="table__item">{el.id}</td>
+                            <td className="table__item">{el.type}</td>
+                        </tr>
+                    })}
+                    </tbody>
+                </table>
+            </div>
         </main>
     )
 

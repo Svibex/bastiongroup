@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footerForm">
-                <form>
+                <form className="footerForm__form">
                     <input className="footerForm__name" placeholder="Ваше имя"/>
                     <input className="footerForm__phone" placeholder="Ваш телефон"/>
                     <div className="footerForm__button_group">

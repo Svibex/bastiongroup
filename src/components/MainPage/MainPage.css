@@ -11,6 +11,11 @@ button:hover {
   background: #fe7273;
 }
 
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
 .mainPage__wrapper {
   background: #f2f2f2;
   padding-bottom: 108px;

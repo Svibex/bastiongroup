@@ -11,6 +11,11 @@ button:hover {
   background: #fe7273;
 }
 
+Link:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
 .card__wrapper {
   height: 411px;
   width: 280px;
