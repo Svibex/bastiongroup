@@ -30,36 +30,41 @@ const Basket = () => {
                         Заказ
                     </div>
                     <form className="basket__orderForm">
-                        <p>Контактная информация</p>
+                        <p className="basket__info">Контактная информация</p>
                         <label>ФИО</label>
+                        <div className="basket__orderFormImg" id="userForm"/>
                         <input
                             type="text"
                             placeholder="ФИО"
                         />
+                        <div className="basket__orderFormImg" id="userPhone" />
                         <input
                             type="text"
                             placeholder="Контактный телефон"
                         />
+                        <div className="basket__orderFormImg" id="userEmail" />
                         <input
                             type="text"
                             placeholder="Email"
                         />
+                        <div className="basket__orderFormImg" id="userCase" />
                         <input
                             type="text"
                             placeholder="Организация / ИНН"
                         />
-                        <div>
+                        <div className="basket__price">
                             <p>Итого</p>
-                            <p>8 499 руб.</p>
+                            <p className="basket__priceQuantity">8 499 руб.</p>
                         </div>
                         <button>
-                            <div/>
+                            <div className="basket__formIMG"/>
                             Оформить заказ
                         </button>
                     </form>
-                    <button>
-                        <div/>
-                        Коммерческое предложение
+                    <button className="basketCommercial">
+                        <div className="basketCommercial__img"/>
+                        <div className="basketCommercial__imgFile"/>
+                        <p>Коммерческое предложение</p>
                     </button>
                 </div>
             </div>

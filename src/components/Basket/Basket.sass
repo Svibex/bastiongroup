@@ -79,4 +79,139 @@
 .basket__orderForm
   display: flex
   flex-direction: column
+  margin-top: 18px
+  padding-left: 20px
+  position: relative
+  label
+    margin-top: 20px
+    color: $greyForPages
+    font-size: 12px
+    line-height: 14px
+    letter-spacing: 0.009em
+    text-align: left
+  input
+    width: 240px
+    border-bottom: 1px solid $greyForPages
+    color: $black
+    font-size: 15px
+    line-height: 18px
+    letter-spacing: 0.009em
+    text-align: left
+    height: 33px
+    margin-top: 18px
+    padding-left: 30px
+    font-weight: 400
+  input::placeholder
+    color: $greyForPages
+    font-weight: 300
+  button
+    margin-top: 21px
+    height: 42px
+    width: 240px
+    border-radius: 4px
+    background: $red
+    color: $white
+    position: relative
+    font-size: 15px
+    font-weight: 500
+    line-height: 18px
+    letter-spacing: 0.009em
 
+.basket__orderFormImg
+  position: absolute
+
+#userForm
+  background: url("../../assets/img/order/user.png")
+  width: 14px
+  height: 14px
+  top: 79px
+  left: 24px
+  opacity: 0.6
+
+#userPhone
+  background: url("../../assets/img/order/phone.png")
+  width: 14px
+  height: 14px
+  top: 130px
+  left: 24px
+
+#userEmail
+  background: url("../../assets/img/order/sign.png")
+  width: 14px
+  height: 14px
+  top: 181px
+  left: 24px
+
+#userCase
+  background: url("../../assets/img/order/briefcase.png")
+  width: 14px
+  height: 14px
+  top: 232px
+  left: 24px
+
+.basket__formIMG
+  background: url("../../assets/img/order/shopping.png")
+  width: 18px
+  height: 18px
+  position: absolute
+  left: 32px
+
+.basket__info
+  font-size: 15px
+  line-height: 18px
+  letter-spacing: 0.009em
+  text-align: left
+  color: $greyForPages
+
+.basket__price
+  margin-top: 43px
+  margin-right: 20px
+  font-size: 18px
+  font-weight: 500
+  line-height: 22px
+  letter-spacing: 1px
+  @include flex-space-between
+
+.basket__priceQuantity
+  color: $red
+
+.basketCommercial
+  height: 62px
+  width: 240px
+  border-radius: 4px
+  background: $white
+  border: 1px solid $red
+  color: $red
+  font-size: 15px
+  font-weight: 500
+  line-height: 18px
+  letter-spacing: 0.009em
+  margin-top: 15px
+  margin-left: 20px
+  @include flex-space-between
+  position: relative
+  p
+    margin-right: 58px
+    width: 106px
+
+.basketCommercial:hover
+  background: $grey
+
+.basketCommercial__img
+  background: url("../../assets/img/order/file.png") $peach 50% no-repeat
+  padding: 6px 4px
+  background-size: 18px
+  width: 26px
+  height: 30px
+  margin-left: 28px
+  border-radius: 2px
+
+.basketCommercial__imgFile
+  background: url("../../assets/img/order/download.png") $white 50% no-repeat
+  background-size: 7px
+  width: 15px
+  height: 15px
+  position: absolute
+  border-radius: 8px
+  left: 43px
+  top: 32px
