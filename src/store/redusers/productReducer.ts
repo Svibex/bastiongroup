@@ -4,6 +4,7 @@ import db from '../../assets/db';
 const initialState: ProductState = {
     productTypes: [{id: 1, type: 'Опора'}, {id: 2, type: 'Колонна'}],
     products: db,
+    gosts: Array.from(new Set(db.map(el => el.gost)))
 }
 
 export const productReducer = (state = initialState, action: UserAction): ProductState => {

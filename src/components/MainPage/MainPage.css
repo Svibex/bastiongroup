@@ -27,28 +27,10 @@ Link:visited {
 }
 
 .mainPage__title {
-  padding-top: 20px;
   height: 77px;
-  margin: 0 auto 35px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-.mainPage__title__description {
-  color: #b3b3b3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 340px;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 14px;
-  letter-spacing: 0.009em;
-  text-align: left;
-}
-.mainPage__title__description p:last-child {
-  color: #000000;
-  font-weight: 500;
 }
 
 .mainPage__nav {

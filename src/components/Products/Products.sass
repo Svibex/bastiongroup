@@ -10,8 +10,8 @@
   height: 59px
 
 .products__header
-  @include flex-space-between
-  width: 465px
+  display: flex
+  align-items: center
   margin-left: 15px
 
 .productsGost
@@ -27,12 +27,17 @@
 
 .productsGost:hover
   cursor: pointer
-  background: $pink
+  background: $darkGrey
   color: $white
 
 .gostActive
   color: $white
   background: $gost
-  margin-left: 0
+  margin-left: 5px
+
+.gostActive:hover
+  cursor: pointer
+  background: $pink
+  color: $white
 
 

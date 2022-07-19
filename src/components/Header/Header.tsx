@@ -66,6 +66,17 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
+            <div className="header__mainPage__wrapper">
+                <div className="header__mainPage__container">
+                    <div className="header__mainPage">
+                        <p>Главная</p>
+                        <p>&#8250;</p>
+                        <p>Интернет магазин</p>
+                        <p>&#8250;</p>
+                        <p>Опоры трубопроводов</p>
+                    </div>
+                </div>
+            </div>
         </header>
     );
 };

@@ -1,0 +1,54 @@
+@import "../../styles/basic"
+
+.basketCard
+  height: 170px
+  border-bottom: 1px solid $middleGrey
+  display: flex
+  align-items: center
+  img
+    width: 105px
+    margin-left: 30px
+
+.basketCard__group
+  margin-left: 30px
+  width: 346px
+
+.basketCard__count
+  height: 35px
+  width: 108px
+  border-radius: 2px
+  border: 1px solid $middleGrey
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.009em
+  color: $black
+  @include flex-center
+  margin-right: 40px
+
+.basketCard__countItem
+  @include flex-center
+  height: 35px
+  width: 28px
+
+.basketCard__countNumber
+  width: 52px
+  height: 35px
+  border-right: 1px solid $middleGrey
+  border-left: 1px solid $middleGrey
+  @include flex-center
+
+.basketCard__quantity
+  font-size: 18px
+  font-weight: 700
+  line-height: 18px
+  letter-spacing: 0.009em
+  text-align: left
+  width: 135px
+
+.basketCard__trash
+  opacity: 0.5
+
+.basketCard__trash:hover
+  opacity: 1
+  cursor: pointer
+

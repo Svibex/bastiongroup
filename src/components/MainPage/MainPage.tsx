@@ -8,13 +8,6 @@ const MainPage = () => {
         <div className="mainPage__wrapper">
             <div className="mainPage">
                 <div className="mainPage__title">
-                    <div className="mainPage__title__description">
-                        <p>Главная</p>
-                        <p>&#8250;</p>
-                        <p>Интернет магазин</p>
-                        <p>&#8250;</p>
-                        <p>Опоры трубопроводов</p>
-                    </div>
                     <div className="mainPage__nav">
                         <div className="mainPage__return">
                             <div className="mainPage__activeCircle">&#8592;</div>

@@ -1,6 +1,7 @@
 export interface ProductState {
     productTypes: ProductType[],
-    products: Product[]
+    products: Product[],
+    gosts: string[]
 }
 
 export interface Product {

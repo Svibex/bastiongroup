@@ -86,17 +86,18 @@ const ProductsSidebar = () => {
                     </div>
                 </div>
                 <div className="filter__price__wrapper">
-                    <div className="filter__price">
-                        <p className="filter__title">Цена, руб</p>
-                        <div className="filter__price__img"/>
-                    </div>
-                    <div className="filter__price__inputs">
-                        <input placeholder="104"/>
-                        <p id="placeholder__inputOT">от</p>
-                        <input placeholder="9990"/>
-                        <p id="placeholder__inputDO">до</p>
-                    </div>
-                    <div>---------------------</div>
+                    {/*<div className="filter__price">*/}
+                    {/*    <p className="filter__title">Цена, руб</p>*/}
+                    {/*    <div className="filter__price__img"/>*/}
+                    {/*</div>*/}
+                    {/*<div className="filter__price__inputs">*/}
+                    {/*    <input placeholder="104"/>*/}
+                    {/*    <p id="placeholder__inputOT">от</p>*/}
+                    {/*    <input placeholder="9990"/>*/}
+                    {/*    <p id="placeholder__inputDO">до</p>*/}
+                    {/*</div>*/}
+                    {/*<div>---------------------</div>*/}
+
                 </div>
                 <div className="filter__types">
                     <div className="filter__title">

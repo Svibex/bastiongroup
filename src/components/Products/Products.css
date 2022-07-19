@@ -29,9 +29,7 @@ Link:visited {
 
 .products__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 465px;
   margin-left: 15px;
 }
 
@@ -49,14 +47,20 @@ Link:visited {
 
 .productsGost:hover {
   cursor: pointer;
-  background: #fe7273;
+  background: #c6c6c6;
   color: #ffffff;
 }
 
 .gostActive {
   color: #ffffff;
   background: #C93E33;
-  margin-left: 0;
+  margin-left: 5px;
+}
+
+.gostActive:hover {
+  cursor: pointer;
+  background: #fe7273;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=Products.css.map */
