@@ -40,51 +40,58 @@ function ProductsForm() {
     }, [data])
 
     return (
-        <main className="wrapper">
-            <h2>Добавление типа товара:</h2>
-            <form>
-                <select
-                    value={selectValue}
-                    name="type"
-                    onChange={selectHandler}
-                >{productTypes.map((item, i) => <option key={i} value={item.type}>{item.type}</option>)}
-                </select>
-                <input placeholder="Идентификатор типа"
-                       value={data.id}
-                       name="id"
-                       onChange={onChangeHandler}
-                />
-                <input placeholder="Название товара"
-                       value={data.name}
-                       name="name"
-                       onChange={onChangeHandler}
-                />
-                <input placeholder="Цена (руб.)"
-                       value={data.price}
-                       name="price"
-                       onChange={onChangeHandler}
-                />
-                <input placeholder="ГОСТ"
-                       value={data.gost}
-                       name="gost"
-                       onChange={onChangeHandler}
-                />
-                <input placeholder="Изображение"
-                       type="file"
-                       value={data.img}
-                       name="img"
-                       onChange={onChangeHandler}
-                />
-                <button className={isDisabled ? "disabled" : "buttonSubmit"}
-                        type="submit"
-                        onClick={submitHandler}
-                        disabled={isDisabled}
-                >Добавить
-                </button>
-            </form>
-            {/*<ul>*/}
-            {/*    {productTypes.map(el => <li>{el.id} {el.name}</li>)}*/}
-            {/*</ul>*/}
+        <main className="productsForm__wrapper">
+            <div className="productsForm">
+                <h3 className="productsForm__title">Добавление товара:</h3>
+                <form className="productsForm__form">
+                    <select
+                        className="productsForm__input"
+                        value={selectValue}
+                        name="type"
+                        onChange={selectHandler}
+                    >{productTypes.map((item, i) => <option key={i} value={item.type}>{item.type}</option>)}
+                    </select>
+                    <input className="productsForm__input"
+                           placeholder="Идентификатор типа"
+                           value={data.id}
+                           name="id"
+                           onChange={onChangeHandler}
+                    />
+                    <input className="productsForm__input"
+                           placeholder="Название товара"
+                           value={data.name}
+                           name="name"
+                           onChange={onChangeHandler}
+                    />
+                    <input className="productsForm__input"
+                           placeholder="Цена (руб.)"
+                           value={data.price}
+                           name="price"
+                           onChange={onChangeHandler}
+                    />
+                    <input className="productsForm__input"
+                           placeholder="ГОСТ"
+                           value={data.gost}
+                           name="gost"
+                           onChange={onChangeHandler}
+                    />
+                    <input placeholder="Изображение"
+                           type="file"
+                           value={data.img}
+                           name="img"
+                           onChange={onChangeHandler}
+                    />
+                    <button className={isDisabled ? "productsForm__disabled" : "productsForm__button"}
+                            type="submit"
+                            onClick={submitHandler}
+                            disabled={isDisabled}
+                    >Добавить
+                    </button>
+                </form>
+                {/*<ul>*/}
+                {/*    {productTypes.map(el => <li>{el.id} {el.name}</li>)}*/}
+                {/*</ul>*/}
+            </div>
         </main>
     )
 

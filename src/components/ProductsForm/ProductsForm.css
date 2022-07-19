@@ -16,12 +16,64 @@ Link:visited {
   color: #000000;
 }
 
-.wrapper {
+.productsForm__wrapper {
+  min-height: 700px;
+  background: #f2f2f2;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.productsForm {
+  display: flex;
   flex-direction: column;
-  height: 400px;
+  align-items: flex-start;
+  width: 1110px;
+}
+
+.productsForm__title {
+  margin-top: 60px;
+}
+
+.productsForm__form {
+  margin: 45px auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productsForm__input {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  width: 800px;
+  height: 34px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.productsForm__button {
+  background-color: #c83e33;
+  color: #ffffff;
+  height: 42px;
+  width: 145px;
+  border-radius: 4px;
+  margin: 45px auto;
+}
+
+.productsForm__disabled {
+  border: 1px solid #c6c6c6;
+  height: 42px;
+  width: 145px;
+  border-radius: 4px;
+  margin: 45px auto;
+}
+
+.productsForm__disabled:hover {
+  background: none;
+  cursor: default;
+}
+
+.productsForm__disabled:active {
+  transform: none;
 }
 
 /*# sourceMappingURL=ProductsForm.css.map */
