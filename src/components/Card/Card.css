@@ -17,9 +17,14 @@ Link:visited {
 }
 
 .card__wrapper {
-  height: 411px;
+  height: 425px;
   width: 280px;
   border: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.card__wrapper:hover {
+  box-shadow: 0 15px 14px 2px #e6e6e6;
 }
 
 .card {
@@ -27,8 +32,9 @@ Link:visited {
   flex-direction: column;
   justify-content: space-between;
   height: 380px;
-  margin-bottom: 30px;
+  margin-top: 45px;
   margin-left: 20px;
+  position: relative;
 }
 
 .cardImg {
@@ -42,8 +48,11 @@ Link:visited {
 
 .cardSales {
   display: flex;
-  margin-top: 15px;
+  flex-direction: column;
+  top: -30px;
   width: 230px;
+  position: absolute;
+  left: -7px;
 }
 
 .cardSales__type {
@@ -60,19 +69,35 @@ Link:visited {
 .hit {
   background: #fe7273;
   width: 54px;
-  margin-left: -5px;
-}
-
-.sale {
-  background: #e57e22;
-  width: 62px;
-  margin-left: 5px;
 }
 
 .promo {
   background: #25ae60;
   width: 57px;
-  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.cardFavourites {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93px;
+  top: -30px;
+  right: 20px;
+}
+.cardFavourites p {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.009em;
+  text-align: right;
+  color: #b3b3b3;
+}
+
+.cardFavouritesIMG {
+  background: url("../../assets/img/star-grey.png");
+  width: 13px;
+  height: 13px;
 }
 
 .cardGost {
@@ -80,7 +105,7 @@ Link:visited {
   line-height: 12px;
   letter-spacing: 0.009em;
   text-align: center;
-  color: #C93E33;
+  color: #c93e33;
   background: #faeceb;
   border-radius: 2px;
   width: 83px;
@@ -88,7 +113,8 @@ Link:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .cardName {
@@ -96,7 +122,6 @@ Link:visited {
   line-height: 22px;
   letter-spacing: 0.009em;
   text-align: left;
-  margin-bottom: 10px;
   width: 239px;
 }
 
@@ -106,6 +131,65 @@ Link:visited {
   line-height: 18px;
   letter-spacing: 0.009em;
   text-align: left;
+}
+
+.cardPriceBasket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 30px;
+}
+.cardPriceBasket .cardPrice__count {
+  margin-right: 20px;
+}
+
+.cardHover {
+  height: 134px;
+  width: 279px;
+  background: #ffffff;
+  position: absolute;
+  top: 409px;
+  z-index: 5;
+  border: 1px solid #e6e6e6;
+  border-top: 0;
+  box-shadow: 0 15px 14px 2px #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.cardHover button {
+  height: 42px;
+  width: 240px;
+  border-radius: 4px;
+}
+
+.cardHover__buttonShopping {
+  background: #c93e33;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.cardHover__buttonShopping__img {
+  background: url("../../assets/img/order/shopping.png");
+  width: 18px;
+  height: 18px;
+  margin-right: 15px;
+}
+
+.cardHover__buttonMore {
+  background: #e6e6e6;
+  color: #000000;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.cardHover__buttonMore:hover {
+  background: #f2f2f2;
 }
 
 /*# sourceMappingURL=Card.css.map */

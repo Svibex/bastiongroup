@@ -1,36 +1,53 @@
 export interface ProductState {
     productTypes: ProductType[],
     products: Product[],
-    gosts: string[]
+    filters: Filters
 }
 
 export interface Product {
     id: number,
     name: string,
-    price: string,
+    price: number,
     gost: string,
     type: string,
     img?: string
 }
 
-export interface ProductType {
+interface Filters {
+    price: Price,
+    types: string[],
+    gosts: string[]
+}
+
+export interface Price {
+    min: number,
+    max: number
+}
+
+interface ProductType {
     id: number | string,
     type: string
 }
 
 export enum ActionTypes {
     ADD_PRODUCT_TYPE = "ADD_PRODUCT_TYPE",
-    ADD_PRODUCT = "ADD_PRODUCT"
+    ADD_PRODUCT = "ADD_PRODUCT",
+    SET_FILTER = "SET_FILTER",
 }
 
-export interface AddProductTypeAction {
+interface AddProductTypeAction {
     type: ActionTypes.ADD_PRODUCT_TYPE,
     payload: ProductType
 }
 
-export interface AddProductAction {
+interface AddProductAction {
     type: ActionTypes.ADD_PRODUCT,
     payload: Product
 }
 
-export type UserAction = AddProductAction | AddProductTypeAction
+interface SetFilterAction {
+    type: ActionTypes.SET_FILTER,
+    payload: Filters
+}
+
+export type UserAction = AddProductAction | AddProductTypeAction | SetFilterAction

@@ -1,10 +1,10 @@
 import {ProductState, ActionTypes, UserAction} from '../../types/types';
-import db from '../../assets/db';
+import {productTypes, products, filters} from '../../assets/db';
 
 const initialState: ProductState = {
-    productTypes: [{id: 1, type: 'Опора'}, {id: 2, type: 'Колонна'}],
-    products: db,
-    gosts: Array.from(new Set(db.map(el => el.gost)))
+    productTypes,
+    products,
+    filters
 }
 
 export const productReducer = (state = initialState, action: UserAction): ProductState => {
@@ -13,6 +13,8 @@ export const productReducer = (state = initialState, action: UserAction): Produc
             return {...state, productTypes: [...state.productTypes, action.payload]}
         case ActionTypes.ADD_PRODUCT:
             return {...state, products: [...state.products, action.payload]}
+        case ActionTypes.SET_FILTER:
+            return {...state, filters: action.payload}
         default:
             return state
     }
