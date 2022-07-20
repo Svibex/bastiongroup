@@ -17,7 +17,7 @@ Link:visited {
 }
 
 .basketCard {
-  height: 170px;
+  height: 172px;
   border-bottom: 1px solid #e6e6e6;
   display: flex;
   align-items: center;
@@ -29,7 +29,22 @@ Link:visited {
 
 .basketCard__group {
   margin-left: 30px;
-  width: 346px;
+  width: 309px;
+  height: 85px;
+}
+
+.basketCard__cardGost {
+  margin-top: 4px;
+}
+
+.basketCard__cardName {
+  width: 309px;
+  margin-top: -10px;
+}
+
+.basketCard__cardPrice {
+  margin-top: 14px;
+  color: #c6c6c6;
 }
 
 .basketCard__count {
@@ -76,6 +91,7 @@ Link:visited {
 
 .basketCard__trash {
   opacity: 0.5;
+  margin-left: 13px;
 }
 
 .basketCard__trash:hover {

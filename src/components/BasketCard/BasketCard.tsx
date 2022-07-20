@@ -7,9 +7,9 @@ const BasketCard = (props: { product: Product }) => {
         <div className="basketCard">
             <img src={props.product.img} alt={props.product.name} />
             <div className="basketCard__group">
-                <p className="cardGost">{props.product.gost}</p>
-                <p className="cardName">{props.product.name}</p>
-                <p className="cardPrice">{props.product.price}</p>
+                <p className="cardGost basketCard__cardGost">{props.product.gost}</p>
+                <p className="cardName basketCard__cardName">{props.product.name}</p>
+                <p className="cardPrice basketCard__cardPrice">{props.product.price}</p>
             </div>
             <div className="basketCard__count">
                 <div className="basketCard__countItem">+</div>
