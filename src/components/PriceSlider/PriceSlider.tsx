@@ -14,8 +14,6 @@ export default function RangeSlider() {
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {value, name} = e.target;
         if (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== '')) return;
-        if(name === 'min' && +value > sliderValue.max) setSliderValue({min: +value, max: +value});
-        if(name === 'max' && +value < sliderValue.min) setSliderValue({min: +value, max: +value});
         else setSliderValue({...sliderValue, [name]: value});
     };
 

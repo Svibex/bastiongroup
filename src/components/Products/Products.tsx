@@ -10,6 +10,8 @@ const Products = () => {
 
     const {products, filters} = useTypedSelector(state => state.product);
     const activeGosts = filters.gosts;
+    const checkedTypes = filters.types;
+
     const gosts = Array.from(new Set(products.map(el => el.gost)));
     const dispatch = useDispatch();
 
@@ -31,6 +33,7 @@ const Products = () => {
             products
                 .filter(el => el.price >= filters.price.min && el.price <= filters.price.max)
                 .filter(el => activeGosts.includes(el.gost) || activeGosts.length === 0)
+                .filter(el => !!checkedTypes.find(item=>el.type===item.type) || checkedTypes.length === 0)
         );
     }, [filters])
 

@@ -15,7 +15,7 @@ export interface Product {
 
 interface Filters {
     price: Price,
-    types: string[],
+    types: ProductType[],
     gosts: string[]
 }
 
@@ -24,7 +24,7 @@ export interface Price {
     max: number
 }
 
-interface ProductType {
+export interface ProductType {
     id: number | string,
     type: string
 }
