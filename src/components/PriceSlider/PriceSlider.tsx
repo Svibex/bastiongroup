@@ -23,11 +23,11 @@ export default function RangeSlider() {
     };
 
     function getMinPrice(): number {
-        return Math.floor(Math.min.apply(null, products.map(el => el.price)));
+        return Math.floor(Math.min.apply(null, products.map(el => +el.price)));
     }
 
     function getMaxPrice(): number {
-        return Math.ceil(Math.max.apply(null, products.map(el => el.price)));
+        return Math.ceil(Math.max.apply(null, products.map(el => +el.price)));
     }
 
     useEffect(() => {

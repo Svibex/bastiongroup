@@ -3,7 +3,10 @@ import {Product} from "../../types/types";
 import "./Card.css"
 
 const Card = (props: { product: Product }) => {
-    const [isCardHover, setIsCardHover] = useState(false)
+
+    const [isCardHover, setIsCardHover] = useState(false);
+    let {img, gost, name, price} = props.product;
+    if(typeof img !== 'string') img = URL.createObjectURL(img);
 
     return (
         <div className="card__wrapper"
@@ -11,11 +14,11 @@ const Card = (props: { product: Product }) => {
              onMouseLeave={() => setIsCardHover(false)}>
             <div className="card">
                 <div className="cardSales">
-                    {props.product.name.toLowerCase().includes('а') &&
+                    {name.toLowerCase().includes('а') &&
                     <div className="cardSales__type hit">ХИТ</div>
                     }
                     <div className="cardSales__type sale">СКИДКА</div>
-                    {props.product.name.toLowerCase().includes('о') &&
+                    {name.toLowerCase().includes('о') &&
                     <div className="cardSales__type promo">АКЦИЯ</div>
                     }
                 </div>
@@ -26,14 +29,14 @@ const Card = (props: { product: Product }) => {
                     </div>
                 )}
                 <div className="cardImg">
-                    <img src={props.product.img} alt={props.product.name}/>
+                    <img src={img} alt={name}/>
                 </div>
                 <div className="cardGost">
-                    <p>{props.product.gost}</p>
+                    <p>{gost}</p>
                 </div>
-                <h2 className="cardName">{props.product.name}</h2>
+                <h2 className="cardName">{name}</h2>
                 <div className="cardPriceBasket">
-                    <p className="cardPrice">{props.product.price} руб.</p>
+                    <p className="cardPrice">{price} руб.</p>
                     {isCardHover && (
                         <div className="basketCard__count cardPrice__count">
                             <div className="basketCard__countItem">+</div>

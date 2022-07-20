@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {ProductState, ActionTypes, UserAction} from '../../types/types';
+import {ProductState, ActionTypes, UserAction, Product} from '../../types/types';
 import "./ProductsForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 function ProductsForm() {
-    const [data, setData] = useState({id: '', name: '', type: '', price: '', gost: '', img: ''});
+    const [data, setData] = useState<Product>({id: '', name: '', type: '', price: '', gost: '', img: ''});
     const [isDisabled, setIsDisabled] = useState(true);
     const {products, productTypes} = useTypedSelector(state => state.product);
     const [selectValue, setSelectValue] = useState(productTypes[0].type);
@@ -23,7 +23,13 @@ function ProductsForm() {
         // if (name === 'price') {
         //     if (!(/^[\d.]*$/.test(value)) || (+value <= 0 && value !== '')) return;
         // }
-        setData(prevState => ({...prevState, [name]: value}));
+        setData({...data, [name]: value});
+    }
+
+    function handleInputFileChange(files: FileList | null) {
+        if(!!files) setData({...data, img: files[0]});
+
+        console.log(files);
     }
 
     function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
@@ -75,9 +81,8 @@ function ProductsForm() {
                     />
                     <input placeholder="Изображение"
                            type="file"
-                           value={data.img}
                            name="img"
-                           onChange={handleInputChange}
+                           onChange={(e)=>handleInputFileChange(e.target.files)}
                     />
                     <button className={isDisabled ? "productsForm__disabled" : "productsForm__button"}
                             type="submit"

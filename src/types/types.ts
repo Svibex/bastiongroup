@@ -5,12 +5,12 @@ export interface ProductState {
 }
 
 export interface Product {
-    id: number,
+    id: number | string,
     name: string,
-    price: number,
+    price: number | string,
     gost: string,
     type: string,
-    img?: string
+    img: string | File
 }
 
 interface Filters {
