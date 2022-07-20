@@ -11,13 +11,17 @@ const Card = (props: { product: Product }) => {
              onMouseLeave={() => setIsCardHover(false)}>
             <div className="card">
                 <div className="cardSales">
+                    {props.product.name.toLowerCase().includes('а') &&
                     <div className="cardSales__type hit">ХИТ</div>
-                    {/*<div className="cardSales__type sale">СКИДКА</div>*/}
+                    }
+                    <div className="cardSales__type sale">СКИДКА</div>
+                    {props.product.name.toLowerCase().includes('о') &&
                     <div className="cardSales__type promo">АКЦИЯ</div>
+                    }
                 </div>
                 {isCardHover && (
                     <div className="cardFavourites">
-                        <div className="cardFavouritesIMG" />
+                        <div className="cardFavouritesIMG"/>
                         <p>В избранное</p>
                     </div>
                 )}

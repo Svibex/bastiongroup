@@ -41,10 +41,12 @@ const Header = () => {
                         <div className="headerBottom__logo"/>
                         <div className="headerBottom__text">Производитель металлических изделий №1</div>
                     </Link>
-                    <button className="headerBottom__button">
-                        <div className="headerBottom__button__img"/>
-                        <p>Каталог</p>
-                    </button>
+                    <Link to="/">
+                        <button className="headerBottom__button">
+                            <div className="headerBottom__button__img"/>
+                            <p>Каталог</p>
+                        </button>
+                    </Link>
                     <div className="headerBottom__input">
                         <label/>
                         <div className="headerBottom__input__search"/>

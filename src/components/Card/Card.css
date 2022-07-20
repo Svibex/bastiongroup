@@ -49,10 +49,12 @@ Link:visited {
 .cardSales {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   top: -30px;
   width: 230px;
   position: absolute;
   left: -7px;
+  height: 92px;
 }
 
 .cardSales__type {
@@ -71,10 +73,14 @@ Link:visited {
   width: 54px;
 }
 
+.sale {
+  background: #e57e22;
+  width: 62px;
+}
+
 .promo {
   background: #25ae60;
   width: 57px;
-  margin-top: 15px;
 }
 
 .cardFavourites {

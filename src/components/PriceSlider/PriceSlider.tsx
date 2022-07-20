@@ -60,6 +60,10 @@ export default function RangeSlider() {
                 value={[sliderValue.min, sliderValue.max]}
                 onChange={handleSliderChange}
                 valueLabelDisplay="off"
+                sx={{
+                    width: 220,
+                    color: "#c93e33",
+                }}
             />
         </div>
     );

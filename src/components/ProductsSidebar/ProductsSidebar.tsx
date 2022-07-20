@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProductsSidebar.css";
 import PriceSlider from "../PriceSlider/PriceSlider";
+import FilterTypes from "../FilterTypes/FilterTypes";
 
 const ProductsSidebar = () => {
     return (
@@ -87,14 +88,8 @@ const ProductsSidebar = () => {
                     </div>
                 </div>
                 <PriceSlider/>
-                <div className="filter__types">
-                    <div className="filter__title">
-                        <p>Тип продукта</p>
-                        <div/>
-                    </div>
-                    <div className="filter__arrowDown"/>
-                </div>
-                <div className="filter__types">
+                <FilterTypes />
+                <div className="filter__brands">
                     <div className="filter__title">
                         <p>Бренд</p>
                         <div/>

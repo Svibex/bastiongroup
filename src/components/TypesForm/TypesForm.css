@@ -84,6 +84,9 @@ Link:visited {
 .table__item {
   text-align: center;
   background: #ffffff;
+  font-size: 17px;
+  line-height: 2;
+  letter-spacing: 0.009em;
 }
 
 .table__itemPosition {

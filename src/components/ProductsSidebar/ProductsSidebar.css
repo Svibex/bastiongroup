@@ -149,6 +149,7 @@ Link:visited {
   border-bottom: 1px solid #e6e6e6;
   width: 270px;
   padding: 21px;
+  height: 160px;
 }
 
 .filter__price {
@@ -169,6 +170,7 @@ Link:visited {
   align-items: center;
   position: relative;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .filter__price__inputs input {
   border: 1px solid #e6e6e6;
@@ -190,7 +192,7 @@ Link:visited {
   left: 135px;
 }
 
-.filter__types {
+.filter__brands {
   display: flex;
   justify-content: space-between;
   align-items: center;
