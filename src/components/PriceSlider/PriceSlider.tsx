@@ -6,12 +6,17 @@ import {useDispatch} from "react-redux";
 export default function RangeSlider() {
 
     const {filters, products} = useTypedSelector(state => state.product);
-    const [sliderValue, setSliderValue] = useState<Price>({min: getMinPrice(), max: getMaxPrice()});
+    const min = getMinPrice(),
+          max = getMaxPrice();
+    const [sliderValue, setSliderValue] = useState<Price>({min, max});
     const dispatch = useDispatch();
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {value, name} = e.target;
-        setSliderValue({...sliderValue, [name]: value});
+        if (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== '')) return;
+        if(name === 'min' && +value > sliderValue.max) setSliderValue({min: +value, max: +value});
+        if(name === 'max' && +value < sliderValue.min) setSliderValue({min: +value, max: +value});
+        else setSliderValue({...sliderValue, [name]: value});
     };
 
     const handleSliderChange = (e: Event, newValue: number | number[]) => {
@@ -20,11 +25,11 @@ export default function RangeSlider() {
     };
 
     function getMinPrice(): number {
-        return Math.min.apply(null, products.map(el => el.price));
+        return Math.floor(Math.min.apply(null, products.map(el => el.price)));
     }
 
     function getMaxPrice(): number {
-        return Math.max.apply(null, products.map(el => el.price));
+        return Math.ceil(Math.max.apply(null, products.map(el => el.price)));
     }
 
     useEffect(() => {
@@ -39,14 +44,14 @@ export default function RangeSlider() {
             </div>
             <div className="filter__price__inputs">
                 <input
-                    placeholder="104"
+                    placeholder={`${min}`}
                     value={sliderValue.min}
                     name="min"
                     onChange={handleInputChange}
                 />
                 <p id="placeholder__inputOT">от</p>
                 <input
-                    placeholder="9990"
+                    placeholder={`${max}`}
                     value={sliderValue.max}
                     name="max"
                     onChange={handleInputChange}

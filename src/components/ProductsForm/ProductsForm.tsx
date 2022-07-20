@@ -18,7 +18,7 @@ function ProductsForm() {
         setData(() => ({id: '', name: '', type: '', price: '', gost: '', img: ''}));
     }
 
-    function onChangeHandler(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
         // if (name === 'price') {
         //     if (!(/^[\d.]*$/.test(value)) || (+value <= 0 && value !== '')) return;
@@ -26,12 +26,10 @@ function ProductsForm() {
         setData(prevState => ({...prevState, [name]: value}));
     }
 
-    function selectHandler(e: React.ChangeEvent<HTMLSelectElement>) {
+    function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
         const {value, name} = e.target;
-        console.log(value, name);
         setSelectValue(value);
         setData(prevState => ({...prevState, [name]: value}));
-        console.log(data);
     }
 
     useEffect(() => {
@@ -48,38 +46,38 @@ function ProductsForm() {
                         className="productsForm__input"
                         value={selectValue}
                         name="type"
-                        onChange={selectHandler}
+                        onChange={handleSelectChange}
                     >{productTypes.map((item, i) => <option key={i} value={item.type}>{item.type}</option>)}
                     </select>
                     <input className="productsForm__input"
                            placeholder="Идентификатор типа"
                            value={data.id}
                            name="id"
-                           onChange={onChangeHandler}
+                           onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="Название товара"
                            value={data.name}
                            name="name"
-                           onChange={onChangeHandler}
+                           onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="Цена (руб.)"
                            value={data.price}
                            name="price"
-                           onChange={onChangeHandler}
+                           onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="ГОСТ"
                            value={data.gost}
                            name="gost"
-                           onChange={onChangeHandler}
+                           onChange={handleInputChange}
                     />
                     <input placeholder="Изображение"
                            type="file"
                            value={data.img}
                            name="img"
-                           onChange={onChangeHandler}
+                           onChange={handleInputChange}
                     />
                     <button className={isDisabled ? "productsForm__disabled" : "productsForm__button"}
                             type="submit"
