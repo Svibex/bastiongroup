@@ -21,6 +21,7 @@ Link:visited {
   background: #ffffff;
   border: 1px solid #e6e6e6;
   display: flex;
+  min-height: 1150px;
 }
 
 .products__header {

@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {ProductState, ActionTypes, UserAction, Product} from '../../types/types';
+import {ActionTypes, Product} from '../../types/types';
 import "./ProductsForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 function ProductsForm() {
     const [data, setData] = useState<Product>({id: '', name: '', type: '', price: '', gost: '', img: ''});
     const [isDisabled, setIsDisabled] = useState(true);
-    const {products, productTypes} = useTypedSelector(state => state.product);
-    const [selectValue, setSelectValue] = useState(productTypes[0].type);
+    const productTypes = useTypedSelector(state => state.product.productTypes);
+    const [selectedValue, setSelectedValue] = useState('');
     const dispatch = useDispatch();
 
     function submitHandler(event: React.MouseEvent) {
@@ -20,21 +20,17 @@ function ProductsForm() {
 
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
-        // if (name === 'price') {
-        //     if (!(/^[\d.]*$/.test(value)) || (+value <= 0 && value !== '')) return;
-        // }
-        setData({...data, [name]: value});
+        if (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== '')) return;
+        else setData({...data, [name]: value});
     }
 
     function handleInputFileChange(files: FileList | null) {
         if(!!files) setData({...data, img: files[0]});
-
-        console.log(files);
     }
 
     function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
         const {value, name} = e.target;
-        setSelectValue(value);
+        setSelectedValue(value);
         setData(prevState => ({...prevState, [name]: value}));
     }
 
@@ -50,10 +46,12 @@ function ProductsForm() {
                 <form className="productsForm__form">
                     <select
                         className="productsForm__input"
-                        value={selectValue}
+                        value={selectedValue}
                         name="type"
                         onChange={handleSelectChange}
-                    >{productTypes.map((item, i) => <option key={i} value={item.type}>{item.type}</option>)}
+                    >
+                        <option disabled={true} value="">Выберите тип</option>
+                        {productTypes.map((item, i) => <option key={item.id} value={item.type}>{item.type}</option>)}
                     </select>
                     <input className="productsForm__input"
                            placeholder="Идентификатор типа"
@@ -91,9 +89,6 @@ function ProductsForm() {
                     >Добавить
                     </button>
                 </form>
-                {/*<ul>*/}
-                {/*    {productTypes.map(el => <li>{el.id} {el.name}</li>)}*/}
-                {/*</ul>*/}
             </div>
         </main>
     )
