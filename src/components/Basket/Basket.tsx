@@ -1,12 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import "./Basket.css";
 import BasketList from "../BasketList/BasketList";
+import {ActionTypes, Product} from "../../types/types";
 
 const Basket = () => {
-    const products = useTypedSelector(state => state.product.basket);
+    const products = useTypedSelector(state => state.product.products);
+    const productsPrice = products.reduce((sum, current) => sum + (
+        (current.amount || 0) * +current.price
+    ), 0)
+
     const dispatch = useDispatch();
+
+    function deleteAll() {
+        dispatch({type: ActionTypes.SET_BASKET, payload: products.map((el: Product) => el.amount = 0)})
+    }
 
     return (
         <div className="basket__wrapper">
@@ -20,10 +29,13 @@ const Basket = () => {
                         </p>
                     </div>
                     <BasketList items={products}/>
-                    <div className="basket__trash">
-                        <div className="basket__trashImg"/>
-                        <p>Очистить корзину</p>
-                    </div>
+                    {productsPrice>0 &&
+                        <div className="basket__trash"
+                             onClick={deleteAll}>
+                            <div className="basket__trashImg"/>
+                            <p>Очистить корзину</p>
+                        </div>
+                    }
                 </div>
                 <div className="basket__order">
                     <div className="basket__orderTitle">
@@ -37,24 +49,24 @@ const Basket = () => {
                             type="text"
                             placeholder="ФИО"
                         />
-                        <div className="basket__orderFormImg" id="userPhone" />
+                        <div className="basket__orderFormImg" id="userPhone"/>
                         <input
                             type="text"
                             placeholder="Контактный телефон"
                         />
-                        <div className="basket__orderFormImg" id="userEmail" />
+                        <div className="basket__orderFormImg" id="userEmail"/>
                         <input
                             type="text"
                             placeholder="Email"
                         />
-                        <div className="basket__orderFormImg" id="userCase" />
+                        <div className="basket__orderFormImg" id="userCase"/>
                         <input
                             type="text"
                             placeholder="Организация / ИНН"
                         />
                         <div className="basket__price">
                             <p>Итого</p>
-                            <p className="basket__priceQuantity">8 499 руб.</p>
+                            <p className="basket__priceQuantity">{productsPrice} руб.</p>
                         </div>
                         <button>
                             <div className="basket__formIMG"/>

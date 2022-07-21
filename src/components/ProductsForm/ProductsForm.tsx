@@ -5,7 +5,7 @@ import "./ProductsForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 function ProductsForm() {
-    const [data, setData] = useState<Product>({id: '', name: '', type: '', price: '', gost: '', img: ''});
+    const [data, setData] = useState<Product>({id: '', name: '', type: '', price: '', gost: '', img: '', amount: 0});
     const [isDisabled, setIsDisabled] = useState(true);
     const productTypes = useTypedSelector(state => state.product.productTypes);
     const [selectedValue, setSelectedValue] = useState('');
@@ -15,12 +15,12 @@ function ProductsForm() {
         event.preventDefault();
         setIsDisabled(true);
         dispatch({type: ActionTypes.ADD_PRODUCT, payload: data});
-        setData(() => ({id: '', name: '', type: '', price: '', gost: '', img: ''}));
+        setData(() => ({id: '', name: '', type: '', price: '', gost: '', img: '', amount: 0}));
     }
 
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
-        if (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== '')) return;
+        if (name === 'price' && (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== ''))) return;
         else setData({...data, [name]: value});
     }
 

@@ -68,6 +68,7 @@ Link:visited {
   align-items: center;
   height: 35px;
   width: 28px;
+  cursor: pointer;
 }
 
 .basketCard__countNumber {

@@ -2,7 +2,6 @@ export interface ProductState {
     productTypes: ProductType[],
     products: Product[],
     filters: Filters,
-    basket: Product[]
 }
 
 export interface Product {
@@ -12,7 +11,7 @@ export interface Product {
     gost: string,
     type: string,
     img: string | File,
-    amount?: number
+    amount: number
 }
 
 interface Filters {
@@ -35,6 +34,7 @@ export enum ActionTypes {
     ADD_PRODUCT_TYPE = "ADD_PRODUCT_TYPE",
     ADD_PRODUCT = "ADD_PRODUCT",
     SET_FILTER = "SET_FILTER",
+    SET_BASKET = "SET_BASKET",
 }
 
 interface AddProductTypeAction {
@@ -52,4 +52,12 @@ interface SetFilterAction {
     payload: Filters
 }
 
-export type UserAction = AddProductAction | AddProductTypeAction | SetFilterAction
+interface SetBasketAction {
+    type: ActionTypes.SET_BASKET,
+    payload: {
+        id: number | string,
+        amount: number,
+    }
+}
+
+export type UserAction = AddProductAction | AddProductTypeAction | SetFilterAction | SetBasketAction

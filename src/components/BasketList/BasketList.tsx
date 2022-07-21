@@ -8,6 +8,7 @@ const BasketList = (props: {items: Product[]}) => {
         <div>
             <div>
                 {props.items.map((el: Product) =>
+                    el.amount>0 &&
                     <BasketCard product={el} key={el.id}/>)}
             </div>
         </div>

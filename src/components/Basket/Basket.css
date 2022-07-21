@@ -89,6 +89,7 @@ Link:visited {
 
 .basket__order {
   width: 280px;
+  min-height: 565px;
 }
 
 .basket__orderTitle {

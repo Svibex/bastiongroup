@@ -1,11 +1,10 @@
 import {ProductState, ActionTypes, UserAction} from '../../types/types';
-import {productTypes, products, filters, basket} from '../../assets/db';
+import {productTypes, products, filters} from '../../assets/db';
 
 const initialState: ProductState = {
     productTypes,
     products,
     filters,
-    basket,
 }
 
 export const productReducer = (state = initialState, action: UserAction): ProductState => {
@@ -16,6 +15,13 @@ export const productReducer = (state = initialState, action: UserAction): Produc
             return {...state, products: [...state.products, action.payload]}
         case ActionTypes.SET_FILTER:
             return {...state, filters: action.payload}
+        case ActionTypes.SET_BASKET:
+            return {
+                ...state, products: state.products.map(el => {
+                    if (el.id === action.payload.id) el.amount = action.payload.amount
+                    return el
+                })
+            }
         default:
             return state
     }

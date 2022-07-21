@@ -2,10 +2,9 @@ import React from "react";
 import "./Header.css";
 import {Link} from "react-router-dom";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import {useDispatch} from "react-redux";
 
 const Header = () => {
-    const products = useTypedSelector(state => state.product.basket);
+    const products = useTypedSelector(state => state.product.products);
     const count = products.reduce((sum, current) => sum + (current.amount || 0), 0)
 
     return (
