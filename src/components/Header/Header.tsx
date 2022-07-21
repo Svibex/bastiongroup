@@ -25,7 +25,11 @@ const Header = () => {
                     <ul className="headerTop__contacts">
                         <li>
                             <div className="headerTop__contacts__phone"/>
-                            <p className="headerTop__contacts__phoneNumber">+7 (499) 380-78-90</p>
+                            <p className="headerTop__contacts__phoneNumber">
+                                <a href="tel:+74993807890">
+                                    +7 (499) 380-78-90
+                                </a>
+                            </p>
                         </li>
                         <li className="headerTop__contacts__city__group">
                             <div className="headerTop__contacts__map"/>
@@ -34,7 +38,11 @@ const Header = () => {
                         </li>
                         <li>
                             <div className="headerTop__contacts__mail"/>
-                            <p>info@bastion.pro</p>
+                            <p>
+                                <a href="mailto: info@bastion.pro">
+                                    info@bastion.pro
+                                </a>
+                            </p>
                         </li>
                     </ul>
                 </div>

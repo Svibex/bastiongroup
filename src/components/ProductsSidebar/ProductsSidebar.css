@@ -16,6 +16,10 @@ Link:visited {
   color: #000000;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .productsSidebar__wrapper {
   border-right: 1px solid #e6e6e6;
   width: 270px;

@@ -16,6 +16,10 @@ Link:visited {
   color: #000000;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .card__wrapper {
   height: 425px;
   width: 280px;

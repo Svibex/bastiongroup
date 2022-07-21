@@ -14,7 +14,6 @@ const Card = (props: { product: Product }) => {
     const dispatch = useDispatch();
 
     function handleOnClick() {
-        console.log({id: props.product.id, amount: value })
         dispatch({type: ActionTypes.SET_BASKET, payload: {id: props.product.id, amount: value }})
     }
 
@@ -60,7 +59,7 @@ const Card = (props: { product: Product }) => {
                     )}
                 </div>
             </div>
-            {/*{isCardHover && (*/}
+            {isCardHover && (
                 <div className="cardHover">
                     <button className="cardHover__buttonShopping"
                             onClick={handleOnClick}
@@ -70,7 +69,7 @@ const Card = (props: { product: Product }) => {
                     </button>
                     <button className="cardHover__buttonMore">Подробнее</button>
                 </div>
-            {/*)}*/}
+            )}
         </div>
     );
 };

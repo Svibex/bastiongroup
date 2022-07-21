@@ -16,6 +16,10 @@ Link:visited {
   color: #000000;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .footer {
   position: relative;
   background: #222628;
@@ -118,6 +122,9 @@ Link:visited {
 .footerInfo__phone {
   font-weight: 700;
   font-size: 16px;
+  color: #ffffff;
+}
+.footerInfo__phone a {
   color: #ffffff;
 }
 

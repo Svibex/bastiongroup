@@ -32,9 +32,9 @@ export interface ProductType {
 
 export interface User {
     fio: string,
-    phone: string | number,
+    phone: string,
     email: string,
-    inn: string | number
+    inn: string
 }
 
 export enum ActionTypes {

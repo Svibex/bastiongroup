@@ -25,8 +25,16 @@ const Footer = () => {
                     <li id="footerInfo__text1">Металлоконструкции Порошковая покраска</li>
                     <li id="footerInfo__text2">Фасадные конструкции Светопрозрачные конструкции</li>
                     <li id="footerInfo__contacts">
-                        <p className="footerInfo__phone">+7 (499) 380-78-90</p>
-                        <p className="footerInfo__mail">info@bastion.pro</p>
+                        <p className="footerInfo__phone">
+                            <a href="tel:+74993807890">
+                                +7 (499) 380-78-90
+                            </a>
+                        </p>
+                        <p className="footerInfo__mail">
+                            <a href = "mailto: info@bastion.pro">
+                                info@bastion.pro
+                            </a>
+                        </p>
                     </li>
                 </ul>
                 <div className="footerInfo__hr"/>

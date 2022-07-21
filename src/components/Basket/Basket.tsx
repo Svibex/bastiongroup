@@ -1,22 +1,37 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import "./Basket.css";
 import BasketList from "../BasketList/BasketList";
 import {ActionTypes, Product, User} from "../../types/types";
+import {validateEmail, validateInn, validatePhoneNumber, validateUserName} from "../../services/validators";
 
 const Basket = () => {
+    const dispatch = useDispatch();
     const products = useTypedSelector(state => state.product.products);
     const productsPrice = products.reduce((sum, current) => sum + (
         (current.amount || 0) * +current.price
     ), 0)
-    const [data, setData] = useState<User>({fio: '', phone: '', email: '', inn: ''})
 
-    const dispatch = useDispatch();
+    const [data, setData] = useState<User>({fio: '', phone: '', email: '', inn: ''});
+    const {fio, phone, email, inn} = data;
+    const [isDisabled, setIsDisabled] = useState(true);
 
     function deleteAll() {
         dispatch({type: ActionTypes.SET_BASKET, payload: products.map((el: Product) => el.amount = 0)})
     }
+
+    useEffect(() => {
+        if(
+            validateEmail(email)
+            && validatePhoneNumber(phone)
+            && validateUserName(fio)
+            && validateInn(inn)
+        ) setIsDisabled(false);
+
+        else setIsDisabled(true);
+
+    }, [data])
 
     function sendOrder(event: React.MouseEvent) {
         event.preventDefault();
@@ -38,8 +53,7 @@ const Basket = () => {
 
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
-        if (name === 'phone' && (!(/^[\d]*$/.test(value)) || (+value <= 0 && value !== ''))) return;
-        else setData({...data, [name]: value});
+        setData({...data, [name]: value});
     }
 
     return (
@@ -74,6 +88,8 @@ const Basket = () => {
                             type="text"
                             placeholder="ФИО"
                             value={data.fio}
+                            title="Разрешены буквы и пробелы"
+                            pattern="^[А-Яа-яЁё\s]+$"
                             name="fio"
                             onChange={handleInputChange}
                         />
@@ -82,6 +98,7 @@ const Basket = () => {
                             type="text"
                             placeholder="Контактный телефон"
                             value={data.phone}
+                            title="Разрешены цифры и знаки + и -"
                             name="phone"
                             onChange={handleInputChange}
                         />
@@ -90,6 +107,7 @@ const Basket = () => {
                             type="text"
                             placeholder="Email"
                             value={data.email}
+                            title="Используйте формат sometext@sometext.domain"
                             name="email"
                             onChange={handleInputChange}
                         />
@@ -97,6 +115,7 @@ const Basket = () => {
                         <input
                             type="text"
                             placeholder="Организация / ИНН"
+                            title="Разрешены буквы, цифры и пробелы"
                             value={data.inn}
                             name="inn"
                             onChange={handleInputChange}
@@ -106,7 +125,10 @@ const Basket = () => {
                             <p className="basket__priceQuantity">{productsPrice} руб.</p>
                         </div>
                         <button
-                            onClick={sendOrder}>
+                            onClick={sendOrder}
+                            disabled={isDisabled}
+                            className={isDisabled ? "basket__buttonDisabled" : "basket__button"}
+                        >
                             <div className="basket__formIMG"/>
                             Оформить заказ
                         </button>

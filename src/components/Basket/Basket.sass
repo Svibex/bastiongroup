@@ -111,13 +111,29 @@
     height: 42px
     width: 240px
     border-radius: 4px
-    background: $red
-    color: $white
     position: relative
     font-size: 15px
     font-weight: 500
     line-height: 18px
     letter-spacing: 0.009em
+
+.basket__button
+  background: $red
+  color: $white
+
+.basket__buttonDisabled
+  border: 1px solid $darkGrey
+  height: 42px
+  width: 145px
+  border-radius: 4px
+  background: $grey
+
+.basket__buttonDisabled:hover
+  cursor: default
+  background: $grey
+
+.basket__buttonDisabled:active
+  transform: none
 
 .basket__orderFormImg
   position: absolute

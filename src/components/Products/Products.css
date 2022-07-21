@@ -16,6 +16,10 @@ Link:visited {
   color: #000000;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .products_wrapper {
   width: 1112px;
   background: #ffffff;
