@@ -5,9 +5,9 @@ export interface ProductState {
 }
 
 export interface Product {
-    id: number | string,
+    id: string,
     name: string,
-    price: number | string,
+    price: string,
     gost: string,
     type: string,
     img: string | File,
@@ -26,7 +26,7 @@ export interface Price {
 }
 
 export interface ProductType {
-    id: number | string,
+    id: string,
     type: string
 }
 

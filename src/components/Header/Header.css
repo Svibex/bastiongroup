@@ -90,6 +90,10 @@ a:hover {
   margin-right: 10px;
 }
 
+.headerTop__contacts__mailLink {
+  color: #000000;
+}
+
 .headerTop__contacts__phoneNumber {
   font-weight: 700;
   font-size: 16px;

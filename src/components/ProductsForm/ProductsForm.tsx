@@ -3,11 +3,19 @@ import {useDispatch} from "react-redux";
 import {ActionTypes, Product} from '../../types/types';
 import "./ProductsForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {
+    validateFileExtension,
+    validateGost,
+    validateId,
+    validatePrice,
+    validateProductName,
+} from "../../services/validators";
 
 function ProductsForm() {
     const [data, setData] = useState<Product>({id: '', name: '', type: '', price: '', gost: '', img: '', amount: 0});
+    const {id, name, price, gost, img} = data;
     const [isDisabled, setIsDisabled] = useState(true);
-    const productTypes = useTypedSelector(state => state.product.productTypes);
+    const {products, productTypes} = useTypedSelector(state => state.product);
     const [selectedValue, setSelectedValue] = useState('');
     const dispatch = useDispatch();
 
@@ -20,8 +28,7 @@ function ProductsForm() {
 
     function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
-        if (name === 'price' && (!(/^[\d]*$/.test(value))  || (+value <= 0 && value !== ''))) return;
-        else setData({...data, [name]: value});
+        setData({...data, [name]: value});
     }
 
     function handleInputFileChange(files: FileList | null) {
@@ -35,8 +42,18 @@ function ProductsForm() {
     }
 
     useEffect(() => {
-        if (data.id !== '' && data.name !== '' && data.type !== '' && data.price !== '' && data.gost !== '' && data.img !== '') setIsDisabled(false);
+    console.log(validateFileExtension(img))
+        if(
+            validateId(id)
+            && validateProductName(name)
+            && validatePrice(price)
+            && validateGost(gost)
+            && validateFileExtension(img)
+            && !(!!products.find(el => el.id === id))
+        ) setIsDisabled(false);
+
         else setIsDisabled(true);
+
     }, [data])
 
     return (
@@ -51,36 +68,36 @@ function ProductsForm() {
                         onChange={handleSelectChange}
                     >
                         <option disabled={true} value="">Выберите тип</option>
-                        {productTypes.map((item, i) => <option key={item.id} value={item.type}>{item.type}</option>)}
+                        {productTypes.map((item) => <option key={item.id} value={item.type}>{item.type}</option>)}
                     </select>
                     <input className="productsForm__input"
                            placeholder="Идентификатор типа"
-                           value={data.id}
+                           value={id}
                            name="id"
                            onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="Название товара"
-                           value={data.name}
+                           value={name}
                            name="name"
                            onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="Цена (руб.)"
-                           value={data.price}
+                           value={price}
                            name="price"
                            onChange={handleInputChange}
                     />
                     <input className="productsForm__input"
                            placeholder="ГОСТ"
-                           value={data.gost}
+                           value={gost}
                            name="gost"
                            onChange={handleInputChange}
                     />
                     <input placeholder="Изображение"
                            type="file"
                            name="img"
-                           onChange={(e)=>handleInputFileChange(e.target.files)}
+                           onChange={(e) => handleInputFileChange(e.target.files)}
                     />
                     <button className={isDisabled ? "productsForm__disabled" : "productsForm__button"}
                             type="submit"

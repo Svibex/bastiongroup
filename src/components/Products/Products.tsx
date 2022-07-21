@@ -31,7 +31,7 @@ const Products = () => {
     useEffect(() => {
         setFilteredProducts(
             products
-                .filter(el => el.price >= filters.price.min && el.price <= filters.price.max)
+                .filter(el => +el.price >= filters.price.min && +el.price <= filters.price.max)
                 .filter(el => activeGosts.includes(el.gost) || activeGosts.length === 0)
                 .filter(el => !!checkedTypes.find(item=>el.type===item.type) || checkedTypes.length === 0)
         );

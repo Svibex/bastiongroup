@@ -39,7 +39,9 @@ const Header = () => {
                         <li>
                             <div className="headerTop__contacts__mail"/>
                             <p>
-                                <a href="mailto: info@bastion.pro">
+                                <a href="mailto: info@bastion.pro"
+                                   className="headerTop__contacts__mailLink"
+                                >
                                     info@bastion.pro
                                 </a>
                             </p>

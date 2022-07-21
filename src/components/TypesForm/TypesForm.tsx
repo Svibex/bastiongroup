@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {ProductState, ActionTypes, UserAction} from '../../types/types';
+import {ActionTypes} from '../../types/types';
 import "./TypesForm.css";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {validateId, validateUserName} from "../../services/validators";
 
 function TypesForm() {
     const [data, setData] = useState({id: '', type: ''});
+    const {id, type} = data;
     const [isDisabled, setIsDisabled] = useState(true);
     const productTypes = useTypedSelector(state => state.product.productTypes);
     const dispatch = useDispatch();
@@ -19,14 +21,16 @@ function TypesForm() {
 
     function onChangeHandler(e: React.ChangeEvent<HTMLInputElement>) {
         const {value, name} = e.target;
-        // if (name === 'price') {
-        //     if (!(/^[\d.]*$/.test(value)) || (+value <= 0 && value !== '')) return;
-        // }
-        setData(prevState => ({...prevState, [name]: value}));
+        setData({...data, [name]: value});
     }
 
     useEffect(() => {
-        if (data.id !== '' && data.type !== '') setIsDisabled(false);
+        if (
+            validateUserName(type)
+            && validateId(id)
+            && !(!!productTypes.find(el => el.id === id))
+        )
+            setIsDisabled(false);
         else setIsDisabled(true);
     }, [data])
 
@@ -65,7 +69,7 @@ function TypesForm() {
                     <tbody>
                     {productTypes.map((el, i) => {
                         return <tr key={i}>
-                            <td className="table__item">{i+1}</td>
+                            <td className="table__item">{i + 1}</td>
                             <td className="table__item">{el.id}</td>
                             <td className="table__item">{el.type}</td>
                         </tr>
