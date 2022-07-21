@@ -2,11 +2,11 @@ import React from 'react';
 import './styles/reset.css';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import MainPage from "./components/MainPage/MainPage";
+import MainPage from "./pages/MainPage/MainPage";
 import {Route, Routes} from "react-router-dom";
-import Basket from "./components/Basket/Basket";
-import ProductsForm from "./components/ProductsForm/ProductsForm";
-import TypesForm from "./components/TypesForm/TypesForm";
+import Basket from "./pages/Basket/Basket";
+import ProductsForm from "./pages/ProductsForm/ProductsForm";
+import TypesForm from "./pages/TypesForm/TypesForm";
 
 function App() {
 

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useDispatch} from "react-redux";
 import "./Basket.css";
-import BasketList from "../BasketList/BasketList";
+import BasketList from "../../components/BasketList/BasketList";
 import {ActionTypes, Product, User} from "../../types/types";
 import {validateEmail, validateInn, validatePhoneNumber, validateUserName} from "../../services/validators";
 
