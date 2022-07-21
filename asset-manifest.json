@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/bastiongroup/static/css/main.6bae8db2.css",
+    "main.js": "/bastiongroup/static/js/main.44fc2471.js",
+    "static/media/logo_footer.png": "/bastiongroup/static/media/logo_footer.6edae624e9d3c1ac052e.png",
+    "index.html": "/bastiongroup/index.html",
+    "main.6bae8db2.css.map": "/bastiongroup/static/css/main.6bae8db2.css.map",
+    "main.44fc2471.js.map": "/bastiongroup/static/js/main.44fc2471.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bae8db2.css",
+    "static/js/main.44fc2471.js"
+  ]
+}
