@@ -79,3 +79,23 @@ export const productTypes = [
     {id: 4, type: 'Опора трубчатая'}];
 
 export const filters = {price: {min: 0, max: 0}, types: [], gosts: []};
+
+export const basket = [
+    {
+        id: 5,
+        name: 'Опора подвижная ОПБ2',
+        price: 1650.5,
+        gost: 'ГОСТ 14911-82',
+        type: 'Опора подвижная',
+        img: 'image/opb2.png',
+        amount: 3,
+    }, {
+        id: 6,
+        name: 'Опора трубчатая ТР',
+        price: 345.7,
+        gost: 'ГОСТ 14911-82',
+        type: 'Опора трубчатая',
+        img: 'image/tr.png',
+        amount: 2,
+    },
+];

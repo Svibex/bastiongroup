@@ -1,7 +1,8 @@
 export interface ProductState {
     productTypes: ProductType[],
     products: Product[],
-    filters: Filters
+    filters: Filters,
+    basket: Product[]
 }
 
 export interface Product {
@@ -10,7 +11,8 @@ export interface Product {
     price: number | string,
     gost: string,
     type: string,
-    img: string | File
+    img: string | File,
+    amount?: number
 }
 
 interface Filters {

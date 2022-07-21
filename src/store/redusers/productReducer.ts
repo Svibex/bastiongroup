@@ -1,10 +1,11 @@
 import {ProductState, ActionTypes, UserAction} from '../../types/types';
-import {productTypes, products, filters} from '../../assets/db';
+import {productTypes, products, filters, basket} from '../../assets/db';
 
 const initialState: ProductState = {
     productTypes,
     products,
-    filters
+    filters,
+    basket,
 }
 
 export const productReducer = (state = initialState, action: UserAction): ProductState => {

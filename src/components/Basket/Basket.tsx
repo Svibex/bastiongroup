@@ -5,7 +5,7 @@ import "./Basket.css";
 import BasketList from "../BasketList/BasketList";
 
 const Basket = () => {
-    const products = useTypedSelector(state => state.product.products);
+    const products = useTypedSelector(state => state.product.basket);
     const dispatch = useDispatch();
 
     return (
