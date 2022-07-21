@@ -5,7 +5,7 @@ export const products = [
         price: '1849.9',
         gost: 'ГОСТ 14911-82',
         type: 'Опора тавровая',
-        img: 'image/th.png',
+        img: 'https://svibex.github.io/bastiongroup/image/kh.png',
         amount: 0,
     },
     {
@@ -14,7 +14,7 @@ export const products = [
         price: '849.9',
         gost: 'ОСТ 36-146-88',
         type: 'Опора корпусная',
-        img: 'image/kp.png',
+        img: 'https://svibex.github.io/bastiongroup/image/kp.png',
         amount: 0,
     },
     {
@@ -23,7 +23,7 @@ export const products = [
         price: '2849.9',
         gost: 'НТС 65-06',
         type: 'Опора корпусная',
-        img: 'image/kh.png',
+        img: 'https://svibex.github.io/bastiongroup/image/kh.png',
         amount: 0,
     },
     {
@@ -32,7 +32,7 @@ export const products = [
         price: '1579.9',
         gost: 'ГОСТ 14911-82',
         type: 'Опора подвижная',
-        img: 'image/opb1.png',
+        img: 'https://svibex.github.io/bastiongroup/image/opb1.png',
         amount: 0,
     },
     {
@@ -41,7 +41,7 @@ export const products = [
         price: '1650.5',
         gost: 'ГОСТ 14911-82',
         type: 'Опора подвижная',
-        img: 'image/opb2.png',
+        img: 'https://svibex.github.io/bastiongroup/image/opb2.png',
         amount: 3,
     }, {
         id: '6',
@@ -49,7 +49,7 @@ export const products = [
         price: '345.7',
         gost: 'ГОСТ 14911-82',
         type: 'Опора трубчатая',
-        img: 'image/tr.png',
+        img: 'https://svibex.github.io/bastiongroup/image/tr.png',
         amount: 2,
     },
     {
@@ -58,7 +58,7 @@ export const products = [
         price: '715.9',
         gost: 'ГОСТ 14911-82',
         type: 'Опора тавровая',
-        img: 'image/tp.png',
+        img: 'https://svibex.github.io/bastiongroup/image/tp.png',
         amount: 0,
     },
     {
@@ -67,7 +67,7 @@ export const products = [
         price: '849.9',
         gost: 'ГОСТ 14911-82',
         type: 'Опора подвижная',
-        img: 'image/opp3.png',
+        img: 'https://svibex.github.io/bastiongroup/image/opp3.png',
         amount: 0,
     },
     {
@@ -76,7 +76,7 @@ export const products = [
         price: '850.9',
         gost: 'ГОСТ 14911-82',
         type: 'Опора подвижная',
-        img: 'image/opp2.png',
+        img: 'https://svibex.github.io/bastiongroup/image/opp2.png',
         amount: 0,
     },
 ];

@@ -1,5 +1,4 @@
 import React from "react";
-import "./BasketList.css";
 import {Product} from "../../types/types";
 import BasketCard from "../BasketCard/BasketCard";
 

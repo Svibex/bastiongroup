@@ -59,7 +59,6 @@ a:hover {
   width: 230px;
   position: absolute;
   left: -7px;
-  height: 92px;
 }
 
 .cardSales__type {
@@ -71,6 +70,7 @@ a:hover {
   padding: 5px 10px;
   border-radius: 50px;
   height: 21px;
+  margin-bottom: 13px;
 }
 
 .hit {
@@ -183,6 +183,24 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 4px;
+}
+
+.cardHover__buttonShoppingDisabled {
+  border: 1px solid #c6c6c6;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.cardHover__buttonShoppingDisabled:hover {
+  cursor: default;
+  background: #f2f2f2;
+}
+
+.cardHover__buttonShoppingDisabled:active {
+  transform: none;
 }
 
 .cardHover__buttonShopping__img {

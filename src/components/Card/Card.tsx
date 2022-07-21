@@ -61,9 +61,9 @@ const Card = (props: { product: Product }) => {
             </div>
             {isCardHover && (
                 <div className="cardHover">
-                    <button className="cardHover__buttonShopping"
+                    <button className={value === 0 ? "cardHover__buttonShoppingDisabled" : "cardHover__buttonShopping"}
                             onClick={handleOnClick}
-                            disabled={value == 0}>
+                            disabled={value === 0}>
                         <div className="cardHover__buttonShopping__img"/>
                         <p>В корзину</p>
                     </button>
