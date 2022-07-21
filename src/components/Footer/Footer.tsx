@@ -10,7 +10,7 @@ const Footer = () => {
                     <input className="footerForm__name" placeholder="Ваше имя"/>
                     <input className="footerForm__phone" placeholder="Ваш телефон"/>
                     <div className="footerForm__button_group">
-                        <button className="footerForm__button" type="submit">
+                        <button className="footerForm__button" type="submit" onClick={(e) => e.preventDefault()}>
                             Заказать звонок
                         </button>
                         <p className="footerForm__text">Нажимая на кнопку вы соглашаетесь с политикой

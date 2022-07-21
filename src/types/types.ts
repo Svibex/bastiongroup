@@ -30,6 +30,13 @@ export interface ProductType {
     type: string
 }
 
+export interface User {
+    fio: string,
+    phone: string | number,
+    email: string,
+    inn: string | number
+}
+
 export enum ActionTypes {
     ADD_PRODUCT_TYPE = "ADD_PRODUCT_TYPE",
     ADD_PRODUCT = "ADD_PRODUCT",
