@@ -35,7 +35,6 @@
   width: 230px
   position: absolute
   left: -7px
-  height: 92px
 
 .cardSales__type
   color: $white
@@ -46,6 +45,7 @@
   padding: 5px 10px
   border-radius: 50px
   height: 21px
+  margin-bottom: 13px
 
 .hit
   background: $pink
@@ -135,6 +135,19 @@
   @include flex-center
   margin-top: 4px
 
+.cardHover__buttonShoppingDisabled
+  border: 1px solid $darkGrey
+  background: $grey
+  @include flex-center
+  margin-top: 4px
+
+.cardHover__buttonShoppingDisabled:hover
+  cursor: default
+  background: $grey
+
+.cardHover__buttonShoppingDisabled:active
+  transform: none
+
 .cardHover__buttonShopping__img
   background: url("../../assets/img/plus.png") no-repeat 50%
   width: 18px
@@ -149,6 +162,3 @@
 
 .cardHover__buttonMore:hover
   background: $grey
-
-
-
